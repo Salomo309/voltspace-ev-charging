@@ -2,12 +2,12 @@ import { Reveal, SectionTag } from './ui';
 
 export default function Market() {
   return (
-    <section id="market" className="w-full bg-[#0a0e16] py-16">
-      <div className="max-w-[1440px] mx-auto px-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
-          <div>
+    <section id="market" className="w-full bg-[#0a0e16] py-12 sm:py-16 overflow-hidden">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 gap-4">
+          <div className="min-w-0">
             <SectionTag>Market Intelligence Brief</SectionTag>
-            <h2 className="font-display font-bold text-[28px] md:text-[40px] mt-1">INDONESIA EV INFRASTRUCTURE OUTLOOK • 2025</h2>
+            <h2 className="font-display font-bold leading-[1.15] text-balance break-words text-[24px] min-[380px]:text-[28px] md:text-[40px] mt-1">INDONESIA EV INFRASTRUCTURE OUTLOOK • 2025</h2>
           </div>
           <p className="text-[#bacbbe] max-w-md text-[14px]">Commercial and residential destination charging represents the single highest yield property-tech retrofit under Indonesian Energy Regulation frameworks.</p>
         </div>
@@ -18,9 +18,9 @@ export default function Market() {
             { code: 'REGULATORY_HEADWIND', icon: 'trending_up', val: '+44% YoY', title: 'Infrastructure Capital Growth', desc: 'Accelerated by Perpres No. 79/2023 EV transition mandates, fiscal tax deductions for commercial premises, and subsidized PLN dedicated connections.', accent: '#00e699' },
           ].map((m, i) => (
             <Reveal key={m.code} delay={i * 0.08}>
-              <div className="p-7 rounded-xl bg-[#181c24] hover:bg-[#1c2028] transition-colors h-full">
-                <div className="flex justify-between mb-5 font-mono text-[11px] text-[#bacbbe]"><span>{m.code}</span><span className="material-symbols-outlined" style={{ color: m.accent }}> {m.icon}</span></div>
-                <div className="font-mono font-extrabold text-[32px]" style={{ color: m.accent }}>{m.val}</div>
+              <div className="p-5 sm:p-7 rounded-xl bg-[#181c24] hover:bg-[#1c2028] transition-colors h-full min-w-0">
+                <div className="flex justify-between gap-2 mb-5 font-mono text-[11px] text-[#bacbbe]"><span className="break-all">{m.code}</span><span className="material-symbols-outlined shrink-0" style={{ color: m.accent }}> {m.icon}</span></div>
+                <div className="font-mono font-extrabold tabular-nums text-[28px] sm:text-[32px]" style={{ color: m.accent }}>{m.val}</div>
                 <div className="font-display font-semibold mt-1">{m.title}</div>
                 <p className="text-[13px] text-[#bacbbe] mt-2">{m.desc}</p>
               </div>
@@ -28,17 +28,17 @@ export default function Market() {
           ))}
         </div>
         <Reveal delay={0.1}>
-          <div className="mt-4 p-5 rounded-xl bg-[#1c2028] flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-lg bg-[#76ffbb]/10 flex items-center justify-center"><span className="material-symbols-outlined text-[#76ffbb]">energy_savings_leaf</span></div>
-              <div>
-                <div className="font-bold">EDGE & Green Building Council Indonesia (GBCI) Ready</div>
+          <div className="mt-4 p-5 rounded-xl bg-[#1c2028] flex flex-col md:flex-row md:items-center items-start justify-between gap-4">
+            <div className="flex items-start gap-4 min-w-0">
+              <div className="w-12 h-12 rounded-lg bg-[#76ffbb]/10 flex items-center justify-center shrink-0"><span className="material-symbols-outlined text-[#76ffbb]">energy_savings_leaf</span></div>
+              <div className="min-w-0">
+                <div className="font-bold text-balance">EDGE & Green Building Council Indonesia (GBCI) Ready</div>
                 <p className="text-[13px] text-[#bacbbe]">Installing VOLTIX ABB wallboxes directly contributes points toward LEED Green Building and GBCI Greenship rating benchmarks.</p>
               </div>
             </div>
-            <div className="flex gap-2 font-mono text-[11px] font-bold">
-              <span className="px-3 py-1 rounded bg-white/5 text-[#76ffbb]">LEED V4 CREDITS</span>
-              <span className="px-3 py-1 rounded bg-white/5 text-[#a5e7ff]">GBCI CERTIFIED</span>
+            <div className="flex flex-wrap gap-2 font-mono text-[11px] font-bold shrink-0">
+              <span className="px-3 py-1 rounded bg-white/5 text-[#76ffbb] whitespace-nowrap">LEED V4 CREDITS</span>
+              <span className="px-3 py-1 rounded bg-white/5 text-[#a5e7ff] whitespace-nowrap">GBCI CERTIFIED</span>
             </div>
           </div>
         </Reveal>

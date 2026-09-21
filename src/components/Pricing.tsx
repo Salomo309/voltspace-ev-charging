@@ -8,10 +8,10 @@ export default function Pricing() {
   const total = useMemo(() => BASE_PRICE + ADDONS.reduce((s, a, i) => s + (checked[i] ? a.price : 0), 0), [checked]);
 
   return (
-    <section id="package" className="max-w-[1440px] mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-      <div className="lg:col-span-7">
+    <section id="package" className="max-w-[1440px] mx-auto px-4 sm:px-6 py-12 sm:py-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start overflow-hidden">
+      <div className="lg:col-span-7 min-w-0">
         <SectionTag>Turnkey Procurement & EPC Execution</SectionTag>
-        <h2 className="font-display font-bold text-[28px] md:text-[40px]">ALL-INCLUSIVE JABODETABEK TURNKEY PACKAGE</h2>
+        <h2 className="font-display font-bold leading-[1.15] text-balance break-words text-[24px] min-[380px]:text-[28px] md:text-[40px]">ALL-INCLUSIVE JABODETABEK TURNKEY PACKAGE</h2>
         <p className="text-[#bacbbe] text-[14px] mt-2">No hidden subcontracting markups. Complete hardware supply, electrical engineering, certified installation, and testing by VOLTIX ABB-certified technicians.</p>
         <div className="mt-6 flex flex-col gap-3">
           {[
@@ -30,21 +30,22 @@ export default function Pricing() {
           ))}
         </div>
       </div>
-      <div className="lg:col-span-5 lg:sticky lg:top-28">
+      <div className="lg:col-span-5 lg:sticky lg:top-28 min-w-0">
         <Reveal>
-          <div className="p-7 rounded-xl bg-[#1c2028] shadow-2xl border border-white/5">
-            <div className="flex justify-between font-mono text-[11px] font-bold text-[#00e699] pb-3"><span>JABODETABEK TURNKEY CONTRACT</span><span className="px-2 py-0.5 rounded bg-white/10 text-white">PPN 11% INCLUDED</span></div>
+          <div className="p-5 sm:p-7 rounded-xl bg-[#1c2028] shadow-2xl border border-white/5 min-w-0">
+            <div className="flex flex-wrap gap-2 justify-between font-mono text-[11px] font-bold text-[#00e699] pb-3"><span className="break-all">JABODETABEK TURNKEY CONTRACT</span><span className="px-2 py-0.5 rounded bg-white/10 text-white whitespace-nowrap">PPN 11% INCLUDED</span></div>
             <div className="py-4">
               <div className="font-mono text-[11px] text-[#bacbbe]">Total Package Investment:</div>
-              <motion.div key={total} initial={{ scale: 0.97 }} animate={{ scale: 1 }} className="font-mono font-extrabold text-[32px]">{formatIDR(total)}</motion.div>
+              <motion.div key={total} initial={{ scale: 0.97 }} animate={{ scale: 1 }} className="font-mono font-extrabold tabular-nums break-all leading-tight text-[26px] min-[380px]:text-[30px] sm:text-[32px]">{formatIDR(total)}</motion.div>
               <div className="text-[13px] text-[#00e699] mt-1 flex items-center gap-1"><span className="material-symbols-outlined text-[16px]">task_alt</span> Fixed transparent price for Greater Jakarta</div>
             </div>
             <div className="font-mono text-[11px] font-bold uppercase tracking-wider pt-2">Select Optional Add-ons:</div>
             <div className="mt-2 flex flex-col gap-2">
               {ADDONS.map((a, i) => (
-                <label key={a.name} className="flex items-center justify-between p-3 rounded bg-white/5 hover:bg-white/10 cursor-pointer transition-colors">
-                  <span className="flex items-center gap-2 text-[13px]"><input type="checkbox" checked={checked[i]} onChange={() => setChecked((c) => c.map((v, j) => (j === i ? !v : v)))} className="w-4 h-4 accent-[#00e699]" />{a.name}</span>
-                  <span className="font-mono text-[11px] text-[#bacbbe]">+{formatIDR(a.price)}</span>
+                <label key={a.name} className="flex items-start gap-3 p-3 rounded bg-white/5 hover:bg-white/10 cursor-pointer transition-colors min-w-0">
+                  <input type="checkbox" checked={checked[i]} onChange={() => setChecked((c) => c.map((v, j) => (j === i ? !v : v)))} className="mt-0.5 w-4 h-4 shrink-0 accent-[#00e699]" />
+                  <span className="flex-1 min-w-0 text-[13px] leading-snug">{a.name}</span>
+                  <span className="font-mono text-[11px] text-[#bacbbe] whitespace-nowrap shrink-0 tabular-nums">+{formatIDR(a.price)}</span>
                 </label>
               ))}
             </div>
