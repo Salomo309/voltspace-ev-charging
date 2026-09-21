@@ -13,16 +13,6 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <div className="flex flex-wrap gap-2">
-            <div className="inline-flex items-center gap-2 px-4 py-1 rounded bg-[#FF0033]/10">
-              <span className="w-2 h-2 rounded-full bg-[#FF0033] shadow-[0_0_8px_#FF0033]" />
-              <span className="font-mono text-[11px] font-bold text-[#FF0033] uppercase tracking-wider">ABB Authorized Solution Partner</span>
-            </div>
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-white/5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#00e699] animate-ping" />
-              <span className="font-mono text-[11px] text-[#76ffbb]">Official Jabodetabek Deployment</span>
-            </div>
-          </div>
           <h1 className="font-display font-extrabold tracking-tight leading-[1.08] text-balance break-words text-[32px] min-[380px]:text-[36px] sm:text-[56px]">
             Make Your Property <br className="hidden sm:inline" />
             <span className="text-[#76ffbb] text-glow">EV-Ready</span>
@@ -59,7 +49,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.15 }}
         >
           <Charger3D />
-          <p className="text-center font-mono text-[11px] text-[#bacbbe] mt-2">ABB Terra AC Wallbox 7kW • Interactive 3D • Stitch Design ANIMATION_1</p>
+          <p className="text-center font-mono text-[11px] text-[#bacbbe] mt-2">ABB Terra AC Wallbox 7kW • Interactive 3D</p>
         </motion.div>
       </div>
     </section>

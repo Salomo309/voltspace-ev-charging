@@ -11,10 +11,6 @@ export default function Navbar() {
             <span className="font-display font-extrabold tracking-wider text-lg">VOLTIX</span>
             <span className="w-2 h-2 rounded-full bg-[#00e699] shadow-[0_0_12px_rgba(0,230,153,.8)]" />
           </a>
-          <div className="hidden xl:flex items-center gap-2 px-3 py-0.5 rounded bg-[#FF0033]/10 border border-[#FF0033]/30">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#FF0033]" />
-            <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-[#FF0033]">ABB Authorized Solution Partner</span>
-          </div>
         </div>
         <nav className="hidden lg:flex items-center gap-7 text-[14px] text-[#bacbbe]">
           {NAV.map((n) => (
