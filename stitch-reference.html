@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface": "#0f131c",
+          "inverse-surface": "#dfe2ee",
+          "outline": "#849589",
+          "background": "#0f131c",
+          "surface-container-lowest": "#0a0e16",
+          "surface-container-highest": "#31353e",
+          "on-primary": "#003822",
+          "on-error": "#690005",
+          "tertiary-fixed-dim": "#ffb3af",
+          "on-secondary-fixed": "#001f28",
+          "surface-dim": "#0f131c",
+          "surface-container-low": "#181c24",
+          "error-container": "#93000a",
+          "secondary-container": "#00d2ff",
+          "on-secondary": "#003543",
+          "on-primary-fixed": "#002112",
+          "surface-container-high": "#262a33",
+          "on-secondary-container": "#00566a",
+          "secondary-fixed": "#b6ebff",
+          "on-tertiary-fixed": "#410006",
+          "secondary": "#a5e7ff",
+          "on-primary-fixed-variant": "#005233",
+          "inverse-on-surface": "#2c3039",
+          "error": "#ffb4ab",
+          "primary-fixed-dim": "#00e296",
+          "inverse-primary": "#006c46",
+          "surface-bright": "#353942",
+          "on-surface-variant": "#bacbbe",
+          "on-primary-container": "#00613e",
+          "surface-tint": "#00e296",
+          "secondary-fixed-dim": "#47d6ff",
+          "primary-fixed": "#4dffb1",
+          "on-background": "#dfe2ee",
+          "on-tertiary": "#68000e",
+          "surface-container": "#1c2028",
+          "primary": "#76ffbb",
+          "tertiary-container": "#ffb8b4",
+          "on-tertiary-fixed-variant": "#930019",
+          "on-secondary-fixed-variant": "#004e60",
+          "tertiary": "#ffdedc",
+          "on-surface": "#dfe2ee",
+          "primary-container": "#00e699",
+          "on-error-container": "#ffdad6",
+          "outline-variant": "#3b4a40",
+          "surface-variant": "#31353e",
+          "tertiary-fixed": "#ffdad8",
+          "on-tertiary-container": "#ad001f"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "gutter": "1.5rem",
+          "space-sm": "0.5rem",
+          "space-md": "1rem",
+          "margin-mobile": "1rem",
+          "space-xl": "2.5rem",
+          "space-xs": "0.25rem",
+          "margin": "2rem",
+          "space-lg": "1.5rem",
+          "gutter-mobile": "1rem"
+        },
+        "fontFamily": {
+          "metric-display": [
+            "JetBrains Mono"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-xl": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-xl-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Inter"
+          ],
+          "body-md": [
+            "Inter"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "label-mono-sm": [
+            "JetBrains Mono"
+          ],
+          "display-hero": [
+            "Plus Jakarta Sans"
+          ],
+          "label-mono-md": [
+            "JetBrains Mono"
+          ],
+          "display-hero-mobile": [
+            "Plus Jakarta Sans"
+          ]
+        },
+        "fontSize": {
+          "metric-display": [
+            "32px",
+            {
+              "lineHeight": "36px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-sm": [
+            "18px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg-mobile": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-xl": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-md": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl-mobile": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "fontWeight": "700"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "26px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "label-mono-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "fontWeight": "500"
+            }
+          ],
+          "display-hero": [
+            "56px",
+            {
+              "lineHeight": "64px",
+              "fontWeight": "800"
+            }
+          ],
+          "label-mono-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "500"
+            }
+          ],
+          "display-hero-mobile": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "fontWeight": "800"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30"><div class="h-20 max-w-[1440px] mx-auto px-margin flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg shrink-0"><a class="flex items-center gap-space-xs group" data-path="solutions" href="#"><span class="font-headline-md text-headline-md tracking-wider font-extrabold text-on-surface uppercase">VOLTIX</span><span class="inline-block w-2 h-2 rounded-full bg-primary-container shadow-[0_0_12px_rgba(0,230,153,0.8)]"></span></a><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-0.5 rounded bg-[#FF0033]/10 border border-[#FF0033]/30"><span class="inline-block w-1.5 h-1.5 rounded-full bg-[#FF0033]"></span><span class="font-label-mono-sm text-label-mono-sm font-bold uppercase tracking-wider text-[#FF0033]">ABB Authorized Solution Partner</span></div></div><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-primary font-bold"><a aria-current="page" class="transition-colors text-primary font-bold" data-path="solutions" href="#">Solutions</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="market-data" href="#">Market Data</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="hardware-specs" href="#">Hardware Specs</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="property-types" href="#">Property Types</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="jabodetabek-packages" href="#">Jabodetabek Packages</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="implementation-process" href="#">Implementation Process</a></nav><div class="flex items-center gap-space-md shrink-0"><div class="hidden sm:flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-high border border-outline-variant/40"><span class="inline-block w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-mono-sm text-label-mono-sm text-secondary font-medium tracking-tight">24/7 Grid Support</span></div><a class="inline-flex items-center justify-center px-space-md py-2.5 rounded-lg bg-primary-container text-on-primary font-headline-sm text-headline-sm font-bold shadow-[0_0_20px_rgba(0,230,153,0.35)] hover:bg-primary-fixed hover:shadow-[0_0_26px_rgba(0,230,153,0.5)] transition-all duration-200" data-path="book-site-survey" href="#">Book a Site Survey</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Subtle Circuit Grid Matrix Scrim -->
+<div class="relative w-full overflow-hidden">
+<!-- Ambient Radial Glow Behind Hero -->
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[1000px] h-[480px] bg-primary-container/10 blur-[130px] pointer-events-none rounded-full"></div>
+<div class="absolute top-80 right-10 w-[420px] h-[420px] bg-secondary-container/10 blur-[120px] pointer-events-none rounded-full"></div>
+<!-- 1. HERO SECTION -->
+<section class="max-w-[1440px] mx-auto px-margin py-space-xl relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<!-- Left Hero Narrative (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col space-y-space-md">
+<!-- Official Partner Badge -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<div class="inline-flex items-center gap-2 px-space-md py-1 rounded bg-[#FF0033]/10 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-[#FF0033] shadow-[0_0_8px_#FF0033]"></span>
+<span class="font-label-mono-sm text-label-mono-sm font-bold text-[#FF0033] uppercase tracking-wider">ABB Authorized Solution Partner</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded bg-surface-container-high shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-primary tracking-wide">Official Jabodetabek Deployment</span>
+</div>
+</div>
+<!-- Headline -->
+<div class="space-y-space-xs pt-space-xs">
+<h1 class="font-display-hero text-display-hero text-on-surface font-extrabold tracking-tight leading-[1.08]">
+              Make Your Property <br class="hidden sm:inline"/>
+<span class="text-primary drop-shadow-[0_0_35px_rgba(0,230,153,0.35)]">EV-Ready</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl pt-2">
+              Turn commercial parking bays and residential developments into high-yield, future-proof EV charging hubs with the industry-standard <span class="text-on-surface font-semibold">ABB Terra AC Wallbox 7kW</span>. Scalable, secure, and revenue-ready.
+            </p>
+</div>
+<!-- CTAs -->
+<div class="pt-space-sm flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md">
+<a class="inline-flex items-center justify-center gap-2 px-space-lg py-3.5 rounded bg-primary-container text-on-primary font-headline-sm text-headline-sm font-bold shadow-[0_0_30px_rgba(0,230,153,0.4)] hover:bg-primary-fixed hover:shadow-[0_0_38px_rgba(0,230,153,0.65)] transition-all duration-200" href="#booking-form">
+<span>Book a Site Survey</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 px-space-lg py-3.5 rounded bg-surface-container-high text-secondary font-headline-sm text-headline-sm font-semibold shadow-sm hover:bg-surface-container-highest transition-all duration-200" href="#turnkey-package">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Explore Solution Package</span>
+</a>
+</div>
+<!-- Micro Spec Ticker Bar -->
+<div class="pt-space-md">
+<div class="p-space-md rounded bg-surface-container-low shadow-sm grid grid-cols-2 md:grid-cols-4 gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="font-label-mono-sm text-label-mono-sm text-primary">⚡</span>
+<div>
+<div class="font-label-mono-sm text-label-mono-sm font-bold text-on-surface">7.4 kW / 32A</div>
+<div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Single-Phase AC</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">🛡️</span>
+<div>
+<div class="font-label-mono-sm text-label-mono-sm font-bold text-on-surface">IEC 61851</div>
+<div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">IP54 Weatherproof</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-mono-sm text-label-mono-sm text-primary">📶</span>
+<div>
+<div class="font-label-mono-sm text-label-mono-sm font-bold text-on-surface">OCPP 1.6J</div>
+<div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Cloud Telemetry</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">💳</span>
+<div>
+<div class="font-label-mono-sm text-label-mono-sm font-bold text-on-surface">RFID &amp; App</div>
+<div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Access Billing</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Hero Interactive 3D Chassis Viewport (5 Cols) -->
+<div class="lg:col-span-5 relative mt-6 lg:mt-0">
+<div class="relative rounded-xl bg-surface-container-low p-2 shadow-2xl overflow-hidden">
+<!-- Hardware Section Watermark -->
+<div class="absolute top-4 left-4 z-20 flex items-center justify-between w-[calc(100%-2rem)]">
+<div class="px-2 py-1 rounded bg-surface-container-lowest/80 backdrop-blur-md">
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-bold">ABB // TERRA_AC_W7-T-0</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-highest/80 backdrop-blur-md">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface">3D Telemetry Feed</span>
+</div>
+</div>
+<!-- 3D Three.js Interactive Component Container -->
+<div class="relative w-full h-[540px] rounded-lg overflow-hidden bg-surface-container-lowest flex items-center justify-center">
+<!-- STITCH_THREEJS_START:ANIMATION_1 class="w-full h-[540px] bg-transparent" -->
+<div class="w-full h-[540px] bg-transparent" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_1" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_1');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  // Interactive Three.js Scene: ABB Terra AC Wallbox 7kW on Architectural Pillar
+const container = document.getElementById('threejs-container') || document.body;
+const width = container.clientWidth || window.innerWidth;
+const height = container.clientHeight || 580;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(40, width / height, 0.1, 100);
+camera.position.set(2.8, 1.4, 3.8);
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.setSize(width, height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.25;
+container.appendChild(renderer.domElement);
+
+// Lighting setup - Engineered High-Tech Look
+const ambientLight = new THREE.AmbientLight(0x0a1526, 2.2);
+scene.add(ambientLight);
+
+const keyLight = new THREE.DirectionalLight(0xffffff, 3.0);
+keyLight.position.set(4, 6, 4);
+keyLight.castShadow = true;
+keyLight.shadow.mapSize.width = 1024;
+keyLight.shadow.mapSize.height = 1024;
+scene.add(keyLight);
+
+const cyanRimLight = new THREE.PointLight(0x00E699, 5.0, 10);
+cyanRimLight.position.set(-2.5, 2.0, -1.0);
+scene.add(cyanRimLight);
+
+const blueFillLight = new THREE.PointLight(0x00D2FF, 4.0, 10);
+blueFillLight.position.set(2.5, -0.5, 2.5);
+scene.add(blueFillLight);
+
+// Group to hold all charger assembly elements
+const rootGroup = new THREE.Group();
+scene.add(rootGroup);
+
+// Ground Pedestal (Modern architectural dark brushed concrete)
+const baseGeo = new THREE.CylinderGeometry(1.6, 1.8, 0.2, 36);
+const baseMat = new THREE.MeshStandardMaterial({
+  color: 0x111622,
+  roughness: 0.85,
+  metalness: 0.2
+});
+const baseMesh = new THREE.Mesh(baseGeo, baseMat);
+baseMesh.position.y = -1.5;
+baseMesh.receiveShadow = true;
+rootGroup.add(baseMesh);
+
+// Glowing Base Trim Ring
+const ringGeo = new THREE.TorusGeometry(1.65, 0.02, 16, 64);
+const ringMat = new THREE.MeshBasicMaterial({ color: 0x00E699 });
+const ringMesh = new THREE.Mesh(ringGeo, ringMat);
+ringMesh.rotation.x = Math.PI / 2;
+ringMesh.position.y = -1.4;
+rootGroup.add(ringMesh);
+
+// Sleek Matte Black Mounting Pillar
+const pillarGeo = new THREE.BoxGeometry(0.32, 2.6, 0.22);
+const pillarMat = new THREE.MeshStandardMaterial({
+  color: 0x161C28,
+  roughness: 0.5,
+  metalness: 0.6
+});
+const pillar = new THREE.Mesh(pillarGeo, pillarMat);
+pillar.position.set(0, -0.2, 0);
+pillar.castShadow = true;
+pillar.receiveShadow = true;
+rootGroup.add(pillar);
+
+// ABB Terra AC Wallbox 7kW Main Unit
+const wallboxGroup = new THREE.Group();
+wallboxGroup.position.set(0, 0.45, 0.15);
+
+// Main Enclosure (Beveled ergonomic box)
+const enclosureGeo = new THREE.BoxGeometry(0.58, 0.86, 0.24);
+const enclosureMat = new THREE.MeshStandardMaterial({
+  color: 0x1f2736,
+  roughness: 0.35,
+  metalness: 0.45
+});
+const enclosure = new THREE.Mesh(enclosureGeo, enclosureMat);
+enclosure.castShadow = true;
+wallboxGroup.add(enclosure);
+
+// Front Faceplate (High-gloss dark glass / polycarbonate finish)
+const faceGeo = new THREE.BoxGeometry(0.52, 0.80, 0.02);
+const faceMat = new THREE.MeshStandardMaterial({
+  color: 0x080c14,
+  roughness: 0.12,
+  metalness: 0.95
+});
+const face = new THREE.Mesh(faceGeo, faceMat);
+face.position.z = 0.125;
+wallboxGroup.add(face);
+
+// LED Status Indicator Bar (ABB Terra Signature Cyan/Green Bar)
+const ledGeo = new THREE.BoxGeometry(0.38, 0.025, 0.015);
+const ledMat = new THREE.MeshBasicMaterial({ color: 0x00E699 });
+const ledBar = new THREE.Mesh(ledGeo, ledMat);
+ledBar.position.set(0, 0.26, 0.14);
+wallboxGroup.add(ledBar);
+
+// RFID Target Emblem / Display Screen Area
+const screenGeo = new THREE.BoxGeometry(0.24, 0.16, 0.01);
+const screenMat = new THREE.MeshStandardMaterial({
+  color: 0x0d131f,
+  roughness: 0.2,
+  metalness: 0.8
+});
+const screenArea = new THREE.Mesh(screenGeo, screenMat);
+screenArea.position.set(0, 0.08, 0.14);
+wallboxGroup.add(screenArea);
+
+// RFID Contactless symbol ring
+const rfidRingGeo = new THREE.TorusGeometry(0.04, 0.005, 12, 32);
+const rfidRingMat = new THREE.MeshBasicMaterial({ color: 0x00D2FF });
+const rfidRing = new THREE.Mesh(rfidRingGeo, rfidRingMat);
+rfidRing.position.set(0, 0.08, 0.148);
+wallboxGroup.add(rfidRing);
+
+// Socket / Plug Holster (Type 2 Socket)
+const socketBaseGeo = new THREE.CylinderGeometry(0.12, 0.12, 0.08, 24);
+socketBaseGeo.rotateX(Math.PI / 2);
+const socketBaseMat = new THREE.MeshStandardMaterial({
+  color: 0x111622,
+  roughness: 0.7,
+  metalness: 0.3
+});
+const socketBase = new THREE.Mesh(socketBaseGeo, socketBaseMat);
+socketBase.position.set(0, -0.22, 0.14);
+wallboxGroup.add(socketBase);
+
+const socketCoreGeo = new THREE.CylinderGeometry(0.08, 0.08, 0.04, 24);
+socketCoreGeo.rotateX(Math.PI / 2);
+const socketCoreMat = new THREE.MeshBasicMaterial({ color: 0x00E699 });
+const socketCore = new THREE.Mesh(socketCoreGeo, socketCoreMat);
+socketCore.position.set(0, -0.22, 0.17);
+wallboxGroup.add(socketCore);
+
+// Cable Wrap Loop hanging neatly from side
+const curve = new THREE.CatmullRomCurve3([
+  new THREE.Vector3(0.24, -0.25, 0.05),
+  new THREE.Vector3(0.42, -0.4, 0.12),
+  new THREE.Vector3(0.38, -0.9, 0.08),
+  new THREE.Vector3(0.1, -1.15, -0.05),
+  new THREE.Vector3(-0.25, -1.0, 0.0),
+  new THREE.Vector3(-0.35, -0.5, 0.1),
+  new THREE.Vector3(-0.24, -0.2, 0.05)
+]);
+const cableGeo = new THREE.TubeGeometry(curve, 48, 0.024, 12, false);
+const cableMat = new THREE.MeshStandardMaterial({
+  color: 0x07090e,
+  roughness: 0.9,
+  metalness: 0.1
+});
+const cableMesh = new THREE.Mesh(cableGeo, cableMat);
+wallboxGroup.add(cableMesh);
+
+// ABB Red Accent Badge bar on top edge
+const abbBadgeGeo = new THREE.BoxGeometry(0.14, 0.025, 0.015);
+const abbBadgeMat = new THREE.MeshBasicMaterial({ color: 0xFF0033 });
+const abbBadge = new THREE.Mesh(abbBadgeGeo, abbBadgeMat);
+abbBadge.position.set(-0.16, 0.34, 0.14);
+wallboxGroup.add(abbBadge);
+
+rootGroup.add(wallboxGroup);
+
+// Ambient Floating Tech Grid particles
+const particlesGeo = new THREE.BufferGeometry();
+const particleCount = 140;
+const posArray = new Float32Array(particleCount * 3);
+for(let i = 0; i < particleCount * 3; i += 3) {
+  posArray[i] = (Math.random() - 0.5) * 5;
+  posArray[i + 1] = Math.random() * 3.5 - 1.2;
+  posArray[i + 2] = (Math.random() - 0.5) * 5;
+}
+particlesGeo.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+const particlesMat = new THREE.PointsMaterial({
+  size: 0.028,
+  color: 0x00E699,
+  transparent: true,
+  opacity: 0.65
+});
+const particles = new THREE.Points(particlesGeo, particlesMat);
+scene.add(particles);
+
+// Interactive mouse rotation with easing
+let mouseX = 0;
+let mouseY = 0;
+let targetRotationY = 0.35;
+let targetRotationX = 0.1;
+
+window.addEventListener('mousemove', (e) => {
+  const rect = container.getBoundingClientRect();
+  const x = (e.clientX - rect.left) / (rect.width || window.innerWidth);
+  const y = (e.clientY - rect.top) / (rect.height || window.innerHeight);
+  targetRotationY = 0.35 + (x - 0.5) * 1.0;
+  targetRotationX = 0.1 + (y - 0.5) * 0.4;
+});
+
+// Render loop
+let clock = new THREE.Clock();
+function animate() {
+  requestAnimationFrame(animate);
+  const elapsedTime = clock.getElapsedTime();
+
+  // Gentle floating & rotation easing
+  rootGroup.rotation.y += (targetRotationY - rootGroup.rotation.y) * 0.04;
+  rootGroup.rotation.x += (targetRotationX - rootGroup.rotation.x) * 0.04;
+
+  // Pulse LED brightness
+  const pulse = Math.sin(elapsedTime * 3.0) * 0.3 + 0.7;
+  ledMat.color.setRGB(0.0 * pulse, 0.9 * pulse, 0.6 * pulse);
+  cyanRimLight.intensity = 4.0 + pulse * 2.0;
+
+  // Slow particle drift
+  particles.rotation.y = elapsedTime * 0.04;
+
+  renderer.render(scene, camera);
+}
+animate();
+
+// Resize handler
+window.addEventListener('resize', () => {
+  const newWidth = container.clientWidth || window.innerWidth;
+  const newHeight = container.clientHeight || 580;
+  camera.aspect = newWidth / newHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(newWidth, newHeight);
+});
+
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_1 -->
+<!-- Floating HUD Telemetry Overlay Tag 1 -->
+<div class="absolute top-20 right-4 z-30 p-2.5 rounded bg-surface-container-high/90 backdrop-blur-lg shadow-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">bolt</span>
+<div>
+<div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant leading-none">Output Current</div>
+<div class="font-label-mono-sm text-label-mono-sm font-bold text-on-surface">32.0 A Continuous</div>
+</div>
+</div>
+<!-- Floating HUD Telemetry Overlay Tag 2 -->
+<div class="absolute bottom-24 left-4 z-30 p-2.5 rounded bg-surface-container-high/90 backdrop-blur-lg shadow-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">thermostat</span>
+<div>
+<div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant leading-none">Junction Temp</div>
+<div class="font-label-mono-sm text-label-mono-sm font-bold text-on-surface">28.4°C Nominal</div>
+</div>
+</div>
+<!-- Floating HUD Telemetry Overlay Tag 3 -->
+<div class="absolute bottom-6 right-4 z-30 p-2.5 rounded bg-surface-container-high/90 backdrop-blur-lg shadow-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary-container">balance</span>
+<div>
+<div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant leading-none">Grid DLM</div>
+<div class="font-label-mono-sm text-label-mono-sm font-bold text-primary">Load Balancing Active</div>
+</div>
+</div>
+</div>
+<!-- Interactivity Help Legend -->
+<div class="pt-2 px-2 pb-1 flex items-center justify-between text-on-surface-variant">
+<span class="font-label-mono-sm text-label-mono-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">touch_app</span> Drag to rotate chassis 360°
+              </span>
+<span class="font-label-mono-sm text-label-mono-sm text-primary">Real-time Solid Model</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- 2. DATA & MARKET OPPORTUNITY SECTION -->
+<section class="w-full bg-surface-container-lowest py-space-xl">
+<div class="max-w-[1440px] mx-auto px-margin">
+<!-- Section Tag & Overline -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
+<div>
+<div class="font-label-mono-md text-label-mono-md font-bold uppercase tracking-wider text-primary">
+            Market Intelligence Brief
+          </div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-bold mt-1">
+            INDONESIA EV INFRASTRUCTURE OUTLOOK • 2025
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Commercial and residential destination charging represents the single highest yield property-tech retrofit under Indonesian Energy Regulation frameworks.
+        </p>
+</div>
+<!-- Stat Counter Metric Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Metric 1 -->
+<div class="relative p-space-lg rounded-xl bg-surface-container-low shadow-md overflow-hidden group hover:bg-surface-container transition-colors">
+<div class="absolute -right-8 -bottom-8 w-32 h-32 bg-primary/5 rounded-full blur-2xl"></div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">FLEET_PROJECTION_2025</span>
+<span class="material-symbols-outlined text-primary text-[20px]">electric_car</span>
+</div>
+<div class="font-metric-display text-metric-display font-extrabold text-on-surface tracking-tight">
+            98,000+
+          </div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">
+            EV Cars in Indonesia
+          </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+            +180% annual surge driven by urban adoption in Greater Jakarta, luxury condominiums, and class-A office commercial parking.
+          </p>
+</div>
+<!-- Metric 2 -->
+<div class="relative p-space-lg rounded-xl bg-surface-container-low shadow-md overflow-hidden group hover:bg-surface-container transition-colors">
+<div class="absolute -right-8 -bottom-8 w-32 h-32 bg-secondary/5 rounded-full blur-2xl"></div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">DESTINATION_SUPPLY_GAP</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">ev_station</span>
+</div>
+<div class="font-metric-display text-metric-display font-extrabold text-secondary tracking-tight">
+            4,655
+          </div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">
+            SPKLU Units Operating Nationwide
+          </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+            Severe supply deficit in private residential parking and workplace facilities. Tenants demand on-site destination wallboxes over public fast hubs.
+          </p>
+</div>
+<!-- Metric 3 -->
+<div class="relative p-space-lg rounded-xl bg-surface-container-low shadow-md overflow-hidden group hover:bg-surface-container transition-colors">
+<div class="absolute -right-8 -bottom-8 w-32 h-32 bg-primary-container/10 rounded-full blur-2xl"></div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">REGULATORY_HEADWIND</span>
+<span class="material-symbols-outlined text-primary text-[20px]">trending_up</span>
+</div>
+<div class="font-metric-display text-metric-display font-extrabold text-primary tracking-tight">
+            +44% YoY
+          </div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">
+            Infrastructure Capital Growth
+          </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+            Accelerated by Perpres No. 79/2023 EV transition mandates, fiscal tax deductions for commercial premises, and subsidized PLN dedicated connections.
+          </p>
+</div>
+</div>
+<!-- Contextual Green Building Banner -->
+<div class="mt-space-md p-space-md rounded-xl bg-surface-container flex flex-col md:flex-row items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[26px]">energy_savings_leaf</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface">EDGE &amp; Green Building Council Indonesia (GBCI) Ready</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Installing VOLTIX ABB wallboxes directly contributes points toward LEED Green Building and GBCI Greenship rating benchmarks.</p>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-space-sm">
+<span class="font-label-mono-sm text-label-mono-sm px-3 py-1 rounded bg-surface-container-high text-primary font-bold">LEED V4 CREDITS</span>
+<span class="font-label-mono-sm text-label-mono-sm px-3 py-1 rounded bg-surface-container-high text-secondary font-bold">GBCI CERTIFIED</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. TARGET PROPERTY TYPES (Interactive Bento Cards) -->
+<section class="max-w-[1440px] mx-auto px-margin py-space-xl">
+<div class="text-center max-w-3xl mx-auto mb-space-lg space-y-space-xs">
+<div class="font-label-mono-md text-label-mono-md font-bold uppercase tracking-wider text-primary">
+        Asset Monetization &amp; Readiness
+      </div>
+<h2 class="font-headline-xl text-headline-xl font-bold text-on-surface">
+        ENGINEERED FOR MULTI-SECTOR ASSET OWNERS
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Tailored turnkey engineering across high-density mixed-use, residential high-rises, and corporate commercial developments.
+      </p>
+</div>
+<!-- 6 Sector Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Sector 1 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between hover:bg-surface-container transition-all group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">corporate_fare</span>
+</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">SECTOR_01</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-2">Office Buildings &amp; Towers</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Increase tenant retention and attract ESG-conscious multinational anchor corporations with automated RFID employee access and centralized monthly billing logs.
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-on-surface-variant">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">High Tenant Retention</span>
+<span class="font-label-mono-sm text-label-mono-sm font-bold text-on-surface">RFID Whitelist</span>
+</div>
+</div>
+<!-- Sector 2 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between hover:bg-surface-container transition-all group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">apartment</span>
+</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">SECTOR_02</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-2">Apartments &amp; Residences</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Private residential charging with Dynamic Load Management (DLM) to safeguard master transformer capacity without triggering sudden building blackouts.
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-on-surface-variant">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">DLM Auto-Balance</span>
+<span class="font-label-mono-sm text-label-mono-sm font-bold text-on-surface">No Breaker Trips</span>
+</div>
+</div>
+<!-- Sector 3 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between hover:bg-surface-container transition-all group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">hotel</span>
+</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">SECTOR_03</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-2">Hotels &amp; Luxury Resorts</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            A tier-one guest amenity that captures high-spending EV road-trippers and extended-stay executive travelers. Direct integration with room-folio billing.
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-on-surface-variant">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">Premium Hospitality</span>
+<span class="font-label-mono-sm text-label-mono-sm font-bold text-on-surface">Folio Integration</span>
+</div>
+</div>
+<!-- Sector 4 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between hover:bg-surface-container transition-all group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">shopping_cart</span>
+</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">SECTOR_04</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-2">Malls &amp; Retail Centers</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Drive an average of +45 minutes extended dwell time per visitor and monetize customer parking turnover with branded high-visibility EV charging bays.
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-on-surface-variant">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">+45m Dwell Time</span>
+<span class="font-label-mono-sm text-label-mono-sm font-bold text-on-surface">High Revenue Yield</span>
+</div>
+</div>
+<!-- Sector 5 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between hover:bg-surface-container transition-all group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">restaurant</span>
+</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">SECTOR_05</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-2">Dining &amp; Lifestyle Hubs</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Destination charging during dining hours; frictionless QRIS e-wallet instant checkout and revenue sharing with tenant association management.
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-on-surface-variant">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">QRIS Self-Checkout</span>
+<span class="font-label-mono-sm text-label-mono-sm font-bold text-on-surface">Auto Settlement</span>
+</div>
+</div>
+<!-- Sector 6 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between hover:bg-surface-container transition-all group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">local_shipping</span>
+</span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">SECTOR_06</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-2">Commercial Logistics Fleets</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Fleet depot overnight automated charging sequences programmed to capture scheduled off-peak discounted PLN industrial tariffs (22:00 - 05:00 WIB).
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-on-surface-variant">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">PLN Off-Peak Tariff</span>
+<span class="font-label-mono-sm text-label-mono-sm font-bold text-on-surface">30% OpEx Cut</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. PRODUCT & HARDWARE SPECIFICATIONS (Interactive Specs Bento Box) -->
+<section class="w-full bg-surface-container-lowest py-space-xl">
+<div class="max-w-[1440px] mx-auto px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
+<div>
+<div class="font-label-mono-md text-label-mono-md font-bold uppercase tracking-wider text-secondary">
+            Certified Hardware Blueprint
+          </div>
+<h2 class="font-headline-xl text-headline-xl font-bold text-on-surface mt-1">
+            ABB TERRA AC WALLBOX 7KW SPECIFICATIONS
+          </h2>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-[#FF0033]"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface font-semibold">SWISS-ENGINEERED BY ABB E-MOBILITY</span>
+</div>
+</div>
+<!-- Bento Box Layout for Hardware -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<!-- Bento Cell 1: High Power Output (Spans 7 cols) -->
+<div class="md:col-span-7 p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-bold">POWER_OUTPUT // MOD_01</span>
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-mono-sm text-label-mono-sm">3X SPEED VS OUTLET</span>
+</div>
+<div class="space-y-space-xs my-space-sm">
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface">7.4 kW Continuous Single-Phase</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Delivers standard 32A single-phase current at 230V nominal. Recharges standard 60 kWh passenger EVs from 20% to 80% in approximately 4.8 hours compared to 15+ hours on standard unmanaged schuko plugs.
+            </p>
+</div>
+<div class="grid grid-cols-3 gap-space-sm pt-space-sm">
+<div class="p-space-sm rounded bg-surface-container-high">
+<div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Max Amperage</div>
+<div class="font-metric-display text-metric-display text-on-surface font-bold">32 A</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-high">
+<div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Supply Voltage</div>
+<div class="font-metric-display text-metric-display text-on-surface font-bold">230 V</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-high">
+<div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Frequency</div>
+<div class="font-metric-display text-metric-display text-on-surface font-bold">50 Hz</div>
+</div>
+</div>
+</div>
+<!-- Bento Cell 2: Universal Standard (Spans 5 cols) -->
+<div class="md:col-span-5 p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-bold">INTERCONNECT // MOD_02</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">power</span>
+</div>
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface mb-2">Type 2 Universal Port</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Compliant with IEC 62196-2 standards. Universal socket with integrated mechanical interlock to prevent unauthorized cable removal during energization. 5m heavy-duty industrial cable included.
+            </p>
+</div>
+<div class="pt-space-md flex items-center gap-space-sm">
+<span class="font-label-mono-sm text-label-mono-sm px-2.5 py-1 rounded bg-surface-container-high text-on-surface">Hyundai Ioniq</span>
+<span class="font-label-mono-sm text-label-mono-sm px-2.5 py-1 rounded bg-surface-container-high text-on-surface">Wuling EV</span>
+<span class="font-label-mono-sm text-label-mono-sm px-2.5 py-1 rounded bg-surface-container-high text-on-surface">BYD &amp; Tesla</span>
+</div>
+</div>
+<!-- Bento Cell 3: Enterprise Security & Weatherproofing (Spans 4 cols) -->
+<div class="md:col-span-4 p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-bold">RUGGEDNESS // MOD_03</span>
+<span class="material-symbols-outlined text-primary text-[20px]">shield</span>
+</div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">IP54 &amp; IK08 Certified</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Engineered for tropical high-humidity conditions in Jabodetabek. Heavy rainproof, dust sealed, with 5-joule mechanical impact shock resistance.
+            </p>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-on-surface-variant">
+<span class="font-label-mono-sm text-label-mono-sm">RFID MIFARE ISO 14443</span>
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-bold">Tamper Proof</span>
+</div>
+</div>
+<!-- Bento Cell 4: Smart Cloud Connectivity (Spans 4 cols) -->
+<div class="md:col-span-4 p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-bold">TELEMETRY // MOD_04</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">cloud_sync</span>
+</div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">OCPP 1.6J Open Protocol</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Native cloud telemetry integration for automated billing engines, real-time meter readings, and secure over-the-air (OTA) firmware deployments.
+            </p>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-on-surface-variant">
+<span class="font-label-mono-sm text-label-mono-sm">Wi-Fi / 4G LTE / LAN</span>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-bold">OTA Upgrades</span>
+</div>
+</div>
+<!-- Bento Cell 5: Dynamic Load Management (Spans 4 cols) -->
+<div class="md:col-span-4 p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-bold">GRID_SAFETY // MOD_05</span>
+<span class="material-symbols-outlined text-primary text-[20px]">dynamic_form</span>
+</div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface mb-1">Dynamic Load Shaving (DLM)</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Active algorithmic power throttling protects property sub-stations by dynamically scaling charger draw based on building instantaneous baseline load.
+            </p>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-on-surface-variant">
+<span class="font-label-mono-sm text-label-mono-sm">Modbus RTU / RS485</span>
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-bold">Zero Breaker Trips</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. TRANSPARENT PRICING & TURNKEY PACKAGE (Interactive Calculator Card) -->
+<section class="max-w-[1440px] mx-auto px-margin py-space-xl" id="turnkey-package">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: Scope & Guarantees (7 cols) -->
+<div class="lg:col-span-7 space-y-space-md">
+<div>
+<div class="font-label-mono-md text-label-mono-md font-bold uppercase tracking-wider text-primary">
+            Turnkey Procurement &amp; EPC Execution
+          </div>
+<h2 class="font-headline-xl text-headline-xl font-bold text-on-surface mt-1">
+            ALL-INCLUSIVE JABODETABEK TURNKEY PACKAGE
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+            No hidden subcontracting markups. Complete hardware supply, heavy electrical engineering, certified installation, and testing conducted by VOLTIX ABB-certified technicians.
+          </p>
+</div>
+<!-- Scope Checklist Item List -->
+<div class="space-y-space-sm pt-space-xs">
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-md shadow-sm">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">check_circle</span>
+<div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface">1x Original ABB Terra AC Wallbox 7kW (TAC-W7-T-0)</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Official Indonesian unit with certified SNI compliance, 5m Type 2 cable, and integrated RFID security.</p>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-md shadow-sm">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">check_circle</span>
+<div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface">Certified Professional Electrical Work (Up to 15m)</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Supreme/Kabelmetal 3x6mm² NYY cable, heavy PVC conduit, Schneider/Hager 40A MCB, and IP65 sub-panel distribution box.</p>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-md shadow-sm">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">check_circle</span>
+<div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface">Grounding Earthing Rod Test (&lt; 2 Ohm)</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dedicated copper grounding rod installation with certified earth-resistance megger validation to guarantee safe shock-free operation.</p>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-md shadow-sm">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">check_circle</span>
+<div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface">Testing, Commissioning &amp; SLO Assistance</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Comprehensive phase stress testing, mobile app configuration, and fast-track assistance for official Sertifikat Laik Operasi (SLO).</p>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-md shadow-sm">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">check_circle</span>
+<div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface">24-Month Official ABB Warranty &amp; SLA</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Local Jabodetabek spare-part depot with 48-hour hardware hot-swap SLA guaranteed under contract.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Turnkey Pricing Calculator (5 cols) -->
+<div class="lg:col-span-5 sticky top-28">
+<div class="p-space-lg rounded-xl bg-surface-container shadow-xl">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="font-label-mono-sm text-label-mono-sm font-bold text-primary">JABODETABEK TURNKEY CONTRACT</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-mono-sm text-label-mono-sm">PPN 11% INCLUDED</span>
+</div>
+<!-- Price Display -->
+<div class="py-space-md">
+<div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Total Package Investment:</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-metric-display text-metric-display text-on-surface font-extrabold text-[36px]" id="display-price">
+                Rp 15.500.000
+              </span>
+</div>
+<div class="font-body-sm text-body-sm text-primary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">task_alt</span> Fixed transparent price for Greater Jakarta
+            </div>
+</div>
+<!-- Add-ons Selector Section -->
+<div class="pt-space-sm space-y-space-sm">
+<div class="font-label-mono-sm text-label-mono-sm font-bold text-on-surface uppercase tracking-wider">
+              Select Optional Add-ons:
+            </div>
+<!-- Add-on 1 -->
+<label class="flex items-center justify-between p-space-sm rounded bg-surface-container-high cursor-pointer hover:bg-surface-container-highest transition-colors">
+<div class="flex items-center gap-2">
+<input checked="" class="addon-checkbox w-4 h-4 accent-[#00E699] rounded cursor-pointer" data-price="88800" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Stainless Wall Hanger &amp; Cable Saddle</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">+Rp 88.800</span>
+</label>
+<!-- Add-on 2 -->
+<label class="flex items-center justify-between p-space-sm rounded bg-surface-container-high cursor-pointer hover:bg-surface-container-highest transition-colors">
+<div class="flex items-center gap-2">
+<input class="addon-checkbox w-4 h-4 accent-[#00E699] rounded cursor-pointer" data-price="260000" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Portable Industrial CEE Socket Upgrade</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">+Rp 260.000</span>
+</label>
+<!-- Add-on 3 -->
+<label class="flex items-center justify-between p-space-sm rounded bg-surface-container-high cursor-pointer hover:bg-surface-container-highest transition-colors">
+<div class="flex items-center gap-2">
+<input class="addon-checkbox w-4 h-4 accent-[#00E699] rounded cursor-pointer" data-price="950000" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Extended 5m Cable (Total 10m Heavy Cable)</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">+Rp 950.000</span>
+</label>
+<!-- Add-on 4 -->
+<label class="flex items-center justify-between p-space-sm rounded bg-surface-container-high cursor-pointer hover:bg-surface-container-highest transition-colors">
+<div class="flex items-center gap-2">
+<input class="addon-checkbox w-4 h-4 accent-[#00E699] rounded cursor-pointer" data-price="2850000" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Dual-Port Galvanized Outdoor Pedestal</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">+Rp 2.850.000</span>
+</label>
+</div>
+<!-- Checkout CTA -->
+<div class="pt-space-lg">
+<a class="w-full inline-flex items-center justify-center gap-2 px-space-md py-3.5 rounded bg-primary-container text-on-primary font-headline-sm text-headline-sm font-bold shadow-[0_0_24px_rgba(0,230,153,0.35)] hover:bg-primary-fixed transition-all" href="#booking-form">
+<span>Lock Package &amp; Book Survey</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<div class="mt-space-sm flex items-center justify-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span class="font-label-mono-sm text-label-mono-sm">Zero upfront deposit required prior to technical site audit</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. HOW IT WORKS (4-Step Process Timeline) -->
+<section class="w-full bg-surface-container-lowest py-space-xl">
+<div class="max-w-[1440px] mx-auto px-margin">
+<div class="text-center max-w-2xl mx-auto mb-space-lg space-y-space-xs">
+<div class="font-label-mono-md text-label-mono-md font-bold uppercase tracking-wider text-primary">
+          Rigorous Engineering Workflow
+        </div>
+<h2 class="font-headline-xl text-headline-xl font-bold text-on-surface">
+          IMPLEMENTATION TIMELINE
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          From initial electrical audit to live commissioning in under 5 business days across Greater Jakarta.
+        </p>
+</div>
+<!-- 4-Step Process Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md relative">
+<!-- Step 1 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between hover:bg-surface-container transition-all relative">
+<div>
+<div class="font-metric-display text-metric-display font-extrabold text-primary mb-2">01</div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2">Technical Site Survey</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Electrical engineer audits main distribution board (MDB), measures transformer headroom, and calculates optimal cable containment routing.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-semibold">Day 1 • 48h SLA</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between hover:bg-surface-container transition-all relative">
+<div>
+<div class="font-metric-display text-metric-display font-extrabold text-secondary mb-2">02</div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2">Engineering Blueprint</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Delivery of certified Single-Line Diagram (SLD), thermal load simulations, and formal PLN capacity upgrade documentation if required.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-semibold">Day 2 • SLD Signoff</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between hover:bg-surface-container transition-all relative">
+<div>
+<div class="font-metric-display text-metric-display font-extrabold text-primary mb-2">03</div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2">Certified Installation</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Conduit containment mounting, dedicated 40A RCBO/MCB panel installation, grounding rod sink, and ABB Wallbox hardware docking.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-secondary font-semibold">Day 3-4 • Execution</span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between hover:bg-surface-container transition-all relative">
+<div>
+<div class="font-metric-display text-metric-display font-extrabold text-primary-container mb-2">04</div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2">Commissioning &amp; Live Handover</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Phase current stress testing, firmware verification, RFID provisioning, backend cloud portal onboarding, and full operational handover.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs">
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-semibold">Day 5 • Operational Live</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. CONTACT & SITE SURVEY BOOKING FORM -->
+<section class="max-w-[1440px] mx-auto px-margin py-space-xl" id="booking-form">
+<div class="p-space-lg md:p-space-xl rounded-2xl bg-surface-container-low shadow-2xl relative overflow-hidden">
+<!-- Background Ambient Glow -->
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary-container/10 blur-[100px] pointer-events-none rounded-full"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center relative z-10">
+<!-- Form Narrative (5 cols) -->
+<div class="lg:col-span-5 space-y-space-md">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-[#FF0033]/10 text-[#FF0033]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#FF0033]"></span>
+<span class="font-label-mono-sm text-label-mono-sm font-bold uppercase tracking-wider">Free Engineering Assessment</span>
+</div>
+<div class="space-y-space-xs">
+<h2 class="font-headline-xl text-headline-xl font-extrabold text-on-surface">
+              Schedule Your Property Technical Assessment
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Our licensed electrical engineers will survey your facility, inspect breaker capacity, and deliver an actionable single-line EV blueprint within 48 hours across Greater Jakarta.
+            </p>
+</div>
+<div class="space-y-space-sm pt-space-xs">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+<span class="font-body-sm text-body-sm">Official ABB Partner SLA &amp; Certified Technicians</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">electric_meter</span>
+<span class="font-body-sm text-body-sm">Compliant with SNI 04-6504.1 &amp; PLN Tariffs</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">support_agent</span>
+<span class="font-body-sm text-body-sm">24/7 Priority Emergency Grid Response Hub</span>
+</div>
+</div>
+<div class="pt-space-sm">
+<div class="p-space-sm rounded bg-surface-container flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[24px]">qr_code_2</span>
+<div>
+<div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">Rapid Dispatch WhatsApp Desk:</div>
+<a class="font-label-mono-sm text-label-mono-sm font-bold text-secondary hover:underline" href="https://wa.me/628110000000">+62 811-VOLTIX-EV (Engineering Fast-Track)</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Form Fields Container (7 cols) -->
+<div class="lg:col-span-7 p-space-lg rounded-xl bg-surface shadow-xl">
+<form class="space-y-space-md" id="survey-request-form" onsubmit="event.preventDefault(); alert('Survey Request Logged! A VOLTIX lead electrical engineer will contact you via WhatsApp within 2 hours.');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Input: Name -->
+<div class="space-y-1">
+<label class="font-label-mono-sm text-label-mono-sm font-bold text-on-surface">FULL NAME / PIC *</label>
+<input class="w-full px-space-md py-2.5 rounded bg-surface-container-high text-on-surface font-body-md placeholder:text-on-surface-variant focus:outline-none focus:ring-1 focus:ring-primary" placeholder="e.g., Hendra Wijaya, ST" required="" type="text"/>
+</div>
+<!-- Input: WhatsApp Number -->
+<div class="space-y-1">
+<label class="font-label-mono-sm text-label-mono-sm font-bold text-on-surface">WHATSAPP NUMBER *</label>
+<input class="w-full px-space-md py-2.5 rounded bg-surface-container-high text-on-surface font-body-md placeholder:text-on-surface-variant focus:outline-none focus:ring-1 focus:ring-primary" placeholder="+62 812-xxxx-xxxx" required="" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Select: Property Type -->
+<div class="space-y-1">
+<label class="font-label-mono-sm text-label-mono-sm font-bold text-on-surface">PROPERTY CLASSIFICATION *</label>
+<select class="w-full px-space-md py-2.5 rounded bg-surface-container-high text-on-surface font-body-md focus:outline-none focus:ring-1 focus:ring-primary" required="">
+<option value="office">Commercial Office Building / Tower</option>
+<option value="apartment">High-Rise Condominium / Apartment</option>
+<option value="hotel">Hotel, Resort or Hospitality</option>
+<option value="mall">Shopping Mall / Retail Center</option>
+<option value="lifestyle">Restaurant / F&amp;B Lifestyle Compound</option>
+<option value="fleet">Logistics Depot / Fleet Warehouse</option>
+<option value="residential">Private Luxury Residence</option>
+</select>
+</div>
+<!-- Select: Location Hub -->
+<div class="space-y-1">
+<label class="font-label-mono-sm text-label-mono-sm font-bold text-on-surface">JABODETABEK REGION *</label>
+<select class="w-full px-space-md py-2.5 rounded bg-surface-container-high text-on-surface font-body-md focus:outline-none focus:ring-1 focus:ring-primary" required="">
+<option value="jaksel">Jakarta Selatan (SCBD, Kuningan, TB Simatupang)</option>
+<option value="jakpus">Jakarta Pusat (Thamrin, Sudirman, Menteng)</option>
+<option value="jakbar">Jakarta Barat &amp; Jakarta Utara (PIK 1 &amp; 2)</option>
+<option value="tangerang">Tangerang &amp; BSD Smart City</option>
+<option value="bekasi">Bekasi &amp; Cikarang Industrial Corridor</option>
+<option value="bogor">Bogor &amp; Sentul City</option>
+<option value="depok">Depok &amp; Cibubur</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Select: Estimated Bays -->
+<div class="space-y-1">
+<label class="font-label-mono-sm text-label-mono-sm font-bold text-on-surface">ESTIMATED CHARGING BAYS</label>
+<select class="w-full px-space-md py-2.5 rounded bg-surface-container-high text-on-surface font-body-md focus:outline-none focus:ring-1 focus:ring-primary">
+<option value="1">1 - 2 Bays (Pilot Deployment)</option>
+<option value="3-5">3 - 5 Bays (Standard Commercial)</option>
+<option value="6-10">6 - 10 Bays (Mid-size Asset)</option>
+<option value="10+">10+ Bays (Major Fleet / Masterplan)</option>
+</select>
+</div>
+<!-- Input: Available Power Capacity -->
+<div class="space-y-1">
+<label class="font-label-mono-sm text-label-mono-sm font-bold text-on-surface">CURRENT PLN POWER (VA)</label>
+<input class="w-full px-space-md py-2.5 rounded bg-surface-container-high text-on-surface font-body-md placeholder:text-on-surface-variant focus:outline-none focus:ring-1 focus:ring-primary" placeholder="e.g. 66 kVA, 197 kVA, or Unsure" type="text"/>
+</div>
+</div>
+<!-- Submit CTA -->
+<div class="pt-space-xs">
+<button class="w-full py-3.5 rounded bg-primary-container text-on-primary font-headline-sm text-headline-sm font-bold shadow-[0_0_24px_rgba(0,230,153,0.4)] hover:bg-primary-fixed transition-all flex items-center justify-center gap-2" type="submit">
+<span>Confirm Survey Inspection Request</span>
+<span class="material-symbols-outlined text-[20px]">engineering</span>
+</button>
+</div>
+<div class="flex items-center justify-center gap-space-sm text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span class="font-label-mono-sm text-label-mono-sm">Zero Commitment • 100% Free Technical Site Report Included</span>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Dynamic Price Calculator Script -->
+<script>
+    (function () {
+      const basePrice = 15500000;
+      const checkboxes = document.querySelectorAll('.addon-checkbox');
+      const displayElem = document.getElementById('display-price');
+
+      function calculateTotal() {
+        let currentTotal = basePrice;
+        checkboxes.forEach(cb => {
+          if (cb.checked) {
+            currentTotal += parseInt(cb.getAttribute('data-price'), 10) || 0;
+          }
+        });
+        // Format to Indonesian Rupiah representation
+        if (displayElem) {
+          displayElem.textContent = 'Rp ' + currentTotal.toLocaleString('id-ID');
+        }
+      }
+
+      checkboxes.forEach(cb => {
+        cb.addEventListener('change', calculateTotal);
+      });
+
+      // Initial execution
+      calculateTotal();
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30"><div class="max-w-[1440px] mx-auto px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-lg pb-space-xl border-b border-outline-variant/20"><div class="lg:col-span-4 space-y-space-md"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md font-extrabold tracking-wider text-on-surface uppercase">VOLTIX</span><span class="inline-block w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_rgba(0,230,153,0.8)]"></span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Industrial-grade commercial EV infrastructure architecture, integrated with ABB E-Mobility hardware and utility grid automation across Southeast Asia.</p><div class="flex items-center gap-space-xs px-space-md py-space-xs rounded bg-[#FF0033]/10 border border-[#FF0033]/30 max-w-fit"><span class="inline-block w-2 h-2 rounded-full bg-[#FF0033]"></span><span class="font-label-mono-sm text-label-mono-sm font-bold text-[#FF0033] uppercase tracking-wider">ABB Authorized Solution Partner</span></div></div><div class="lg:col-span-3 space-y-space-sm"><div class="font-label-mono-md text-label-mono-md font-bold uppercase tracking-wider text-on-surface">Compliance &amp; Certification</div><ul class="space-y-space-xs font-label-mono-sm text-label-mono-sm text-on-surface-variant"><li>SNI 04-6504.1 (Indonesian National Standard)</li><li>IEC 61851-1 / IEC 61851-23 EV Conductive Systems</li><li>ISO 15118 (Plug &amp; Charge Protocol)</li><li>OCPP 1.6J &amp; 2.0.1 Open Charge Alliance Validated</li><li>Dirjen Ketenagalistrikan (DJK) Grid Interconnect</li></ul></div><div class="lg:col-span-3 space-y-space-sm"><div class="font-label-mono-md text-label-mono-md font-bold uppercase tracking-wider text-on-surface">Jabodetabek Deployment Hubs</div><ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li>DKI Jakarta (SCBD, Mega Kuningan, PIK 2, TB Simatupang)</li><li>Tangerang &amp; BSD Smart City Hub</li><li>Bekasi Industrial Corridor (GIIC, MM2100, Cikarang)</li><li>Bogor Sentul Commercial Districts</li><li>Depok Regional Logistics Terminals</li></ul></div><div class="lg:col-span-2 space-y-space-sm"><div class="font-label-mono-md text-label-mono-md font-bold uppercase tracking-wider text-on-surface">Direct Engineering</div><p class="font-body-sm text-body-sm text-on-surface-variant">Rapid Field Telemetry &amp; Critical Dispatch:</p><a class="inline-flex items-center gap-space-xs font-label-mono-sm text-label-mono-sm text-primary hover:text-primary-fixed transition-colors" href="https://wa.me/628110000000"><span class="material-symbols-outlined text-[16px]">call</span><span>+62 (021) 8060-VOLT</span></a><div class="pt-space-xs"><span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded bg-surface-container-high border border-outline-variant/30 font-label-mono-sm text-label-mono-sm text-secondary"><span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>Engineering WhatsApp Direct</span></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">© 2025 PT VOLTIX ENERGI PERSADA TBK. ALL RIGHTS RESERVED. POWERED BY ABB E-MOBILITY.</div><div class="flex items-center gap-space-lg font-body-sm text-body-sm text-on-surface-variant"><a class="hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms of Service</a><a class="hover:text-on-surface transition-colors" data-path="grid-compliance-sla" href="#">Grid Compliance SLA</a></div></div></div></footer></body></html>
