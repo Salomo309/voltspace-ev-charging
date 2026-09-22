@@ -15,10 +15,12 @@ export function Reveal({ children, delay = 0, className = '' }: { children: Reac
   );
 }
 
-export function SectionTag({ children }: { children: ReactNode }) {
+export function Kicker({ no, label }: { no: string; label: string }) {
   return (
-    <div className="font-mono text-[12px] sm:text-[13px] font-bold uppercase tracking-widest leading-relaxed text-[#00e699]">
-      {children}
+    <div className="flex items-center gap-3 font-mono text-[12px] tracking-[0.2em] uppercase text-[#8fa6ad]">
+      <span className="text-[#00e699]">{no}</span>
+      <span className="h-px w-10 bg-white/20" />
+      <span>{label}</span>
     </div>
   );
 }

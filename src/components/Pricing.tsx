@@ -1,58 +1,77 @@
 import { useMemo, useState } from 'react';
-import { ADDONS, BASE_PRICE, formatIDR } from '../data';
-import { Reveal, SectionTag } from './ui';
 import { motion } from 'framer-motion';
+import { ADDONS, BASE_PRICE, formatIDR } from '../data';
+import { Kicker, Reveal } from './ui';
+
+const SCOPE = [
+  'ABB Terra AC Wallbox 7 kW, SNI unit + 5 m Type 2 cable',
+  'Certified electrical work up to 15 m — 40A MCB, IP65 sub-panel',
+  'Grounding rod install, tested below 2 Ohm',
+  'Commissioning, app setup & SLO fast-track assistance',
+  '24-month warranty, 48-hour hot-swap SLA in Jabodetabek',
+];
 
 export default function Pricing() {
   const [checked, setChecked] = useState<boolean[]>(ADDONS.map((a) => a.checked));
   const total = useMemo(() => BASE_PRICE + ADDONS.reduce((s, a, i) => s + (checked[i] ? a.price : 0), 0), [checked]);
 
   return (
-    <section id="package" className="max-w-[1440px] mx-auto px-4 sm:px-6 py-12 sm:py-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start overflow-hidden">
-      <div className="lg:col-span-7 min-w-0">
-        <SectionTag>Turnkey Procurement & EPC Execution</SectionTag>
-        <h2 className="font-display font-bold leading-[1.15] text-balance break-words text-[24px] min-[380px]:text-[28px] md:text-[40px]">ALL-INCLUSIVE JABODETABEK TURNKEY PACKAGE</h2>
-        <p className="text-[#bacbbe] text-[14px] mt-2">No hidden subcontracting markups. Complete hardware supply, electrical engineering, certified installation, and testing by VOLTIX ABB-certified technicians.</p>
-        <div className="mt-6 flex flex-col gap-3">
-          {[
-            ['1x Original ABB Terra AC Wallbox 7kW (TAC-W7-T-0)', 'Official Indonesian unit with SNI compliance, 5m Type 2 cable, integrated RFID security.'],
-            ['Certified Professional Electrical Work (Up to 15m)', 'Supreme/Kabelmetal 3x6mm² NYY cable, PVC conduit, Schneider 40A MCB, IP65 sub-panel.'],
-            ['Grounding Earthing Rod Test (< 2 Ohm)', 'Dedicated copper grounding rod with certified earth-resistance validation.'],
-            ['Testing, Commissioning & SLO Assistance', 'Phase stress testing, app configuration, fast-track Sertifikat Laik Operasi (SLO).'],
-            ['24-Month Official ABB Warranty & SLA', 'Local Jabodetabek spare-part depot with 48-hour hot-swap SLA.'],
-          ].map(([t, d]) => (
-            <Reveal key={t}>
-              <div className="p-4 rounded-xl bg-[#181c24] flex gap-4">
-                <span className="material-symbols-outlined text-[#00e699]">check_circle</span>
-                <div><div className="font-bold text-[15px]">{t}</div><p className="text-[13px] text-[#bacbbe]">{d}</p></div>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </div>
-      <div className="lg:col-span-5 lg:sticky lg:top-28 min-w-0">
-        <Reveal>
-          <div className="p-5 sm:p-7 rounded-xl bg-[#1c2028] shadow-2xl border border-white/5 min-w-0">
-            <div className="flex flex-wrap gap-2 justify-between font-mono text-[11px] font-bold text-[#00e699] pb-3"><span className="break-all">JABODETABEK TURNKEY CONTRACT</span><span className="px-2 py-0.5 rounded bg-white/10 text-white whitespace-nowrap">PPN 11% INCLUDED</span></div>
-            <div className="py-4">
-              <div className="font-mono text-[11px] text-[#bacbbe]">Total Package Investment:</div>
-              <motion.div key={total} initial={{ scale: 0.97 }} animate={{ scale: 1 }} className="font-mono font-extrabold tabular-nums break-all leading-tight text-[26px] min-[380px]:text-[30px] sm:text-[32px]">{formatIDR(total)}</motion.div>
-              <div className="text-[13px] text-[#00e699] mt-1 flex items-center gap-1"><span className="material-symbols-outlined text-[16px]">task_alt</span> Fixed transparent price for Greater Jakarta</div>
-            </div>
-            <div className="font-mono text-[11px] font-bold uppercase tracking-wider pt-2">Select Optional Add-ons:</div>
-            <div className="mt-2 flex flex-col gap-2">
-              {ADDONS.map((a, i) => (
-                <label key={a.name} className="flex items-start gap-3 p-3 rounded bg-white/5 hover:bg-white/10 cursor-pointer transition-colors min-w-0">
-                  <input type="checkbox" checked={checked[i]} onChange={() => setChecked((c) => c.map((v, j) => (j === i ? !v : v)))} className="mt-0.5 w-4 h-4 shrink-0 accent-[#00e699]" />
-                  <span className="flex-1 min-w-0 text-[13px] leading-snug">{a.name}</span>
-                  <span className="font-mono text-[11px] text-[#bacbbe] whitespace-nowrap shrink-0 tabular-nums">+{formatIDR(a.price)}</span>
-                </label>
-              ))}
-            </div>
-            <a href="#booking" className="mt-6 w-full inline-flex justify-center gap-2 px-4 py-3.5 rounded bg-[#00e699] text-[#003822] font-bold shadow-[0_0_24px_rgba(0,230,153,.35)] hover:bg-[#4dffb1]">Lock Package & Book Survey <span className="material-symbols-outlined">arrow_forward</span></a>
-            <div className="mt-3 flex justify-center gap-2 text-[#bacbbe] font-mono text-[11px]"><span className="material-symbols-outlined text-[14px]">lock</span> Zero upfront deposit prior to site audit</div>
+    <section id="package" className="border-t border-white/10 bg-[#071318]">
+      <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-12 px-4 py-20 sm:px-6 sm:py-28 lg:grid-cols-12">
+        <div className="lg:col-span-7">
+          <Reveal>
+            <Kicker no="04" label="Turnkey package" />
+            <h2 className="display-section mt-6 text-[clamp(2rem,6vw,4.5rem)]">
+              One price<span className="text-[#00e699]">.</span>
+              <br />
+              No markups<span className="text-[#00e699]">.</span>
+            </h2>
+          </Reveal>
+          <div className="mt-10 border-t border-white/10">
+            {SCOPE.map((t, i) => (
+              <Reveal key={t} delay={i * 0.04}>
+                <div className="flex gap-4 border-b border-white/10 py-4 text-[15px] leading-relaxed">
+                  <span className="font-mono text-[13px] text-[#00e699]" aria-hidden>+</span>
+                  <span>{t}</span>
+                </div>
+              </Reveal>
+            ))}
           </div>
-        </Reveal>
+        </div>
+        <div className="lg:col-span-5">
+          <Reveal className="lg:sticky lg:top-24">
+            <div className="border-t-2 border-[#00e699] pt-6">
+              <div className="font-mono text-[12px] tracking-[0.2em] uppercase text-[#8fa6ad]">
+                Jabodetabek turnkey, PPN 11% incl.
+              </div>
+              <motion.div
+                key={total}
+                initial={{ opacity: 0.4 }}
+                animate={{ opacity: 1 }}
+                className="mt-3 font-mono text-[clamp(2rem,6vw,3.25rem)] font-bold tabular-nums leading-none tracking-tight"
+              >
+                {formatIDR(total)}
+              </motion.div>
+              <div className="mt-8 border-t border-white/10">
+                {ADDONS.map((a, i) => (
+                  <label key={a.name} className="flex cursor-pointer items-start gap-3 border-b border-white/10 py-4">
+                    <input
+                      type="checkbox"
+                      checked={checked[i]}
+                      onChange={() => setChecked((c) => c.map((v, j) => (j === i ? !v : v)))}
+                      className="mt-1 h-4 w-4 shrink-0 accent-[#00e699]"
+                    />
+                    <span className="flex-1 text-[14px] leading-snug">{a.name}</span>
+                    <span className="shrink-0 font-mono text-[12px] tabular-nums text-[#8fa6ad]">+{formatIDR(a.price)}</span>
+                  </label>
+                ))}
+              </div>
+              <a href="#booking" className="mt-8 flex min-h-[52px] items-center justify-center bg-[#00e699] font-mono text-[13px] font-bold tracking-[0.12em] uppercase text-[#071318] transition-colors hover:bg-[#76ffbb]">
+                Lock package →
+              </a>
+            </div>
+          </Reveal>
+        </div>
       </div>
     </section>
   );

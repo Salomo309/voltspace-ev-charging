@@ -1,47 +1,34 @@
-import { Reveal, SectionTag } from './ui';
+import { Kicker, Reveal } from './ui';
+
+const STATS: Array<[string, string, string]> = [
+  ['98,000+', 'EV cars on Indonesian roads', 'Up 180% year-on-year, concentrated in Greater Jakarta offices and residences.'],
+  ['4,655', 'Public chargers nationwide', 'Private and workplace destination charging is where the deficit — and the yield — sits.'],
+  ['+44%', 'Infrastructure capital growth', 'Driven by Perpres 79/2023 mandates and commercial tax deductions.'],
+];
 
 export default function Market() {
   return (
-    <section id="market" className="w-full bg-[#0a0e16] py-12 sm:py-16 overflow-hidden">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 gap-4">
-          <div className="min-w-0">
-            <SectionTag>Market Intelligence Brief</SectionTag>
-            <h2 className="font-display font-bold leading-[1.15] text-balance break-words text-[24px] min-[380px]:text-[28px] md:text-[40px] mt-1">INDONESIA EV INFRASTRUCTURE OUTLOOK • 2025</h2>
-          </div>
-          <p className="text-[#bacbbe] max-w-md text-[14px]">Commercial and residential destination charging represents the single highest yield property-tech retrofit under Indonesian Energy Regulation frameworks.</p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {[
-            { code: 'FLEET_PROJECTION_2025', icon: 'electric_car', val: '98,000+', title: 'EV Cars in Indonesia', desc: '+180% annual surge driven by urban adoption in Greater Jakarta, luxury condominiums, and class-A office commercial parking.', accent: '#76ffbb' },
-            { code: 'DESTINATION_SUPPLY_GAP', icon: 'ev_station', val: '4,655', title: 'SPKLU Units Operating Nationwide', desc: 'Severe supply deficit in private residential parking and workplace facilities. Tenants demand on-site destination wallboxes over public fast hubs.', accent: '#a5e7ff' },
-            { code: 'REGULATORY_HEADWIND', icon: 'trending_up', val: '+44% YoY', title: 'Infrastructure Capital Growth', desc: 'Accelerated by Perpres No. 79/2023 EV transition mandates, fiscal tax deductions for commercial premises, and subsidized PLN dedicated connections.', accent: '#00e699' },
-          ].map((m, i) => (
-            <Reveal key={m.code} delay={i * 0.08}>
-              <div className="p-5 sm:p-7 rounded-xl bg-[#181c24] hover:bg-[#1c2028] transition-colors h-full min-w-0">
-                <div className="flex justify-between gap-2 mb-5 font-mono text-[11px] text-[#bacbbe]"><span className="break-all">{m.code}</span><span className="material-symbols-outlined shrink-0" style={{ color: m.accent }}> {m.icon}</span></div>
-                <div className="font-mono font-extrabold tabular-nums text-[28px] sm:text-[32px]" style={{ color: m.accent }}>{m.val}</div>
-                <div className="font-display font-semibold mt-1">{m.title}</div>
-                <p className="text-[13px] text-[#bacbbe] mt-2">{m.desc}</p>
+    <section id="market" className="mx-auto max-w-[1440px] px-4 py-20 sm:px-6 sm:py-28">
+      <Reveal>
+        <Kicker no="01" label="Market" />
+        <h2 className="display-section mt-6 max-w-4xl text-[clamp(2rem,6vw,4.5rem)]">
+          Demand is outpacing supply<span className="text-[#00e699]">.</span>
+        </h2>
+      </Reveal>
+      <div className="mt-12 border-t border-white/10">
+        {STATS.map(([val, title, desc], i) => (
+          <Reveal key={val} delay={i * 0.06}>
+            <div className="grid grid-cols-1 gap-2 border-b border-white/10 py-8 sm:py-10 md:grid-cols-12 md:gap-6">
+              <div className="font-mono text-[clamp(2.5rem,7vw,5rem)] font-bold leading-none tabular-nums tracking-tight md:col-span-5">
+                {val}
               </div>
-            </Reveal>
-          ))}
-        </div>
-        <Reveal delay={0.1}>
-          <div className="mt-4 p-5 rounded-xl bg-[#1c2028] flex flex-col md:flex-row md:items-center items-start justify-between gap-4">
-            <div className="flex items-start gap-4 min-w-0">
-              <div className="w-12 h-12 rounded-lg bg-[#76ffbb]/10 flex items-center justify-center shrink-0"><span className="material-symbols-outlined text-[#76ffbb]">energy_savings_leaf</span></div>
-              <div className="min-w-0">
-                <div className="font-bold text-balance">EDGE & Green Building Council Indonesia (GBCI) Ready</div>
-                <p className="text-[13px] text-[#bacbbe]">Installing VOLTIX ABB wallboxes directly contributes points toward LEED Green Building and GBCI Greenship rating benchmarks.</p>
+              <div className="md:col-span-7">
+                <div className="font-display text-xl font-bold tracking-tight sm:text-2xl">{title}</div>
+                <p className="mt-2 max-w-xl text-[14px] leading-relaxed text-[#8fa6ad]">{desc}</p>
               </div>
             </div>
-            <div className="flex flex-wrap gap-2 font-mono text-[11px] font-bold shrink-0">
-              <span className="px-3 py-1 rounded bg-white/5 text-[#76ffbb] whitespace-nowrap">LEED V4 CREDITS</span>
-              <span className="px-3 py-1 rounded bg-white/5 text-[#a5e7ff] whitespace-nowrap">GBCI CERTIFIED</span>
-            </div>
-          </div>
-        </Reveal>
+          </Reveal>
+        ))}
       </div>
     </section>
   );

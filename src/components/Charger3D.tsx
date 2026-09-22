@@ -105,30 +105,20 @@ function Particles() {
 
 export default function Charger3D() {
   return (
-    <div className="relative w-full h-[380px] sm:h-[440px] lg:h-[520px] rounded-xl overflow-hidden bg-[#0a0e16] border border-white/5">
-      <Canvas shadows camera={{ position: [2.8, 1.4, 3.8], fov: 40 }} dpr={[1, 1.75]} gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }} performance={{ min: 0.5 }}>
-        <ambientLight intensity={1.4} color="#0a1526" />
-        <directionalLight position={[4, 6, 4]} intensity={2.2} castShadow shadow-mapSize={[1024, 1024]} />
-        <WallboxModel />
-        <Particles />
-        <ContactShadows position={[0, -1.62, 0]} opacity={0.6} scale={6} blur={2.4} far={3} color="#000" />
-        <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.8} minPolarAngle={Math.PI / 3.2} maxPolarAngle={Math.PI / 1.7} />
-      </Canvas>
-      <div className="absolute top-3 left-3 z-10 px-2.5 py-1.5 rounded bg-white/5 backdrop-blur border border-white/10 text-[11px] font-mono flex items-center gap-2 max-w-[calc(100%-24px)]">
-        <span className="w-1.5 h-1.5 rounded-full bg-[#00e699] animate-pulse shrink-0" />
-        <span className="truncate">32A • 230V • LIVE TELEMETRY</span>
+    <div>
+      <div className="relative h-[360px] w-full overflow-hidden border-t border-white/10 sm:h-[440px] lg:h-[520px]">
+        <Canvas shadows camera={{ position: [2.8, 1.4, 3.8], fov: 40 }} dpr={[1, 1.75]} gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }} performance={{ min: 0.5 }}>
+          <ambientLight intensity={1.4} color="#0a1526" />
+          <directionalLight position={[4, 6, 4]} intensity={2.2} castShadow shadow-mapSize={[1024, 1024]} />
+          <WallboxModel />
+          <Particles />
+          <ContactShadows position={[0, -1.62, 0]} opacity={0.6} scale={6} blur={2.4} far={3} color="#000" />
+          <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.8} minPolarAngle={Math.PI / 3.2} maxPolarAngle={Math.PI / 1.7} />
+        </Canvas>
       </div>
-      <div className="absolute bottom-14 sm:bottom-24 left-3 z-10 p-2 rounded sm:p-2.5 sm:rounded bg-white/5 backdrop-blur border border-white/10 text-[10px] sm:text-[11px]">
-        <div className="opacity-60">Junction Temp</div>
-        <div className="font-bold">28.4°C Nominal</div>
-      </div>
-      <div className="absolute bottom-14 sm:bottom-6 right-3 z-10 p-2 rounded sm:p-2.5 sm:rounded bg-white/5 backdrop-blur border border-white/10 text-[10px] sm:text-[11px] text-right">
-        <div className="opacity-60">Grid DLM</div>
-        <div className="font-bold text-[#00e699]">Load Balancing Active</div>
-      </div>
-      <div className="absolute bottom-2 left-3 right-3 flex justify-between gap-2 text-[10px] sm:text-[11px] font-mono opacity-60">
-        <span className="truncate">Drag to rotate 360°</span>
-        <span className="text-[#00e699] shrink-0 hidden min-[380px]:inline">Real-time Solid Model</span>
+      <div className="flex items-center justify-between border-t border-white/10 py-3 font-mono text-[11px] tracking-[0.15em] uppercase text-[#8fa6ad]">
+        <span>ABB Terra AC — 7 kW</span>
+        <span className="hidden min-[380px]:inline">Drag to rotate</span>
       </div>
     </div>
   );

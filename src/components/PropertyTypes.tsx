@@ -1,36 +1,34 @@
 import { SECTORS } from '../data';
-import { Reveal, SectionTag } from './ui';
-import { motion } from 'framer-motion';
+import { Kicker, Reveal } from './ui';
 
 export default function PropertyTypes() {
   return (
-    <section id="property" className="max-w-[1440px] mx-auto px-4 sm:px-6 py-12 sm:py-16 overflow-hidden">
-      <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 px-1">
-        <SectionTag>Asset Monetization & Readiness</SectionTag>
-        <h2 className="font-display font-bold leading-[1.15] text-balance break-words text-[24px] min-[380px]:text-[28px] md:text-[40px]">ENGINEERED FOR MULTI-SECTOR ASSET OWNERS</h2>
-        <p className="text-[#bacbbe] text-[14px] mt-2">Tailored turnkey engineering across high-density mixed-use, residential high-rises, and corporate commercial developments.</p>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {SECTORS.map((s, i) => (
-          <Reveal key={s.code} delay={(i % 3) * 0.07}>
-            <motion.div whileHover={{ y: -4 }} className="p-5 sm:p-7 rounded-xl bg-[#181c24] hover:bg-[#1c2028] transition-all h-full min-w-0 flex flex-col justify-between group">
-              <div>
-                <div className="flex items-center justify-between mb-5">
-                  <span className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-[#76ffbb] group-hover:bg-[#00e699] group-hover:text-[#003822] transition-colors">
-                    <span className="material-symbols-outlined">{s.icon}</span>
-                  </span>
-                  <span className="font-mono text-[11px] text-[#bacbbe]">{s.code}</span>
-                </div>
-                <h3 className="font-display font-bold text-[18px] mb-2">{s.title}</h3>
-                <p className="text-[13px] text-[#bacbbe]">{s.desc}</p>
-              </div>
-              <div className="mt-5 pt-4 border-t border-white/5 flex flex-wrap gap-x-3 gap-y-1 justify-between font-mono text-[11px]">
-                <span className="text-[#a5e7ff]">{s.tag1}</span>
-                <span className="font-bold text-right">{s.tag2}</span>
-              </div>
-            </motion.div>
-          </Reveal>
-        ))}
+    <section id="property" className="border-t border-white/10 bg-[#071318]">
+      <div className="mx-auto max-w-[1440px] px-4 py-20 sm:px-6 sm:py-28">
+        <Reveal>
+          <Kicker no="02" label="Where it deploys" />
+          <h2 className="display-section mt-6 max-w-4xl text-[clamp(2rem,6vw,4.5rem)]">
+            One wallbox, six asset classes<span className="text-[#00e699]">.</span>
+          </h2>
+        </Reveal>
+        <div className="mt-12 border-t border-white/10">
+          {SECTORS.map((s, i) => (
+            <Reveal key={s.code} delay={Math.min(i * 0.04, 0.2)}>
+              <a href="#booking" className="group grid grid-cols-1 gap-1 border-b border-white/10 py-6 transition-colors hover:bg-white/[0.02] sm:py-7 md:grid-cols-12 md:items-baseline md:gap-6">
+                <span className="font-mono text-[12px] tabular-nums text-[#8fa6ad] md:col-span-1">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <span className="font-display text-2xl font-bold tracking-tight transition-transform duration-300 group-hover:translate-x-2 sm:text-3xl md:col-span-5">
+                  {s.title}
+                </span>
+                <span className="max-w-xl text-[14px] leading-relaxed text-[#8fa6ad] md:col-span-5">{s.desc}</span>
+                <span className="hidden font-mono text-[12px] tracking-[0.15em] uppercase text-[#00e699] opacity-0 transition-opacity group-hover:opacity-100 md:col-span-1 md:text-right" aria-hidden>
+                  →
+                </span>
+              </a>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   );

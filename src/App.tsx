@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Marquee from './components/Marquee';
 import Market from './components/Market';
 import PropertyTypes from './components/PropertyTypes';
 import Hardware from './components/Hardware';
@@ -10,10 +11,13 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div id="top" className="min-h-screen bg-[#0B0F17] text-[#dfe2ee] font-body">
+    <div id="top" className="min-h-screen bg-[#0b2936] font-body text-[#edf5f2] antialiased">
       <Navbar />
       <main>
         <Hero />
+        <div className="mt-14 sm:mt-20">
+          <Marquee />
+        </div>
         <Market />
         <PropertyTypes />
         <Hardware />
