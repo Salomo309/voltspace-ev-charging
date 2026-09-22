@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-[#0b2936]/85 backdrop-blur-xl">
       <div className="mx-auto flex min-h-16 max-w-[1440px] items-center justify-between gap-4 px-4 py-3 sm:px-6">
-        <a href="#top" className="font-display text-lg font-extrabold tracking-tight">
+        <a href="#top" className="font-display text-lg font-bold tracking-tight">
           VOLTIX<span className="text-[#00e699]">.</span>
         </a>
         <nav className="hidden items-center gap-8 font-mono text-[12px] tracking-[0.15em] uppercase text-[#8fa6ad] lg:flex">
