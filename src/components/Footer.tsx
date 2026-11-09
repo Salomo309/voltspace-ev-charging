@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="flex flex-col gap-2 text-muted"><a href="#solutions">EV-Ready Retrofit</a><a href="#hardware">ABB Terra 7kW</a><a href="#package">Turnkey Package</a><a href="#booking">Site Survey</a></div>
         </div>
       </div>
-      <div className="border-t border-line py-4 text-center font-mono text-[11px] text-muted">© 2026 Evamo • Evamo EV Infrastructure • Built with React + Three.js + Tailwind</div>
+      <div className="border-t border-line py-4 text-center font-mono text-[11px] text-muted">© 2026 Evamo • Evamo EV Infrastructure</div>
     </footer>
   );
 }
