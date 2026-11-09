@@ -1,9 +1,25 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { NAV } from '../data';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const lightMode = document.documentElement.classList.contains('light-mode');
+  const [lightMode, setLightMode] = useState(document.documentElement.classList.contains('light-mode'));
+
+  useEffect(() => {
+    const handleThemeChange = () => {
+      setLightMode(document.documentElement.classList.contains('light-mode'));
+    };
+    document.documentElement.addEventListener('theme-change', handleThemeChange);
+    return () => document.documentElement.removeEventListener('theme-change', handleThemeChange);
+  }, []);
+
+  const toggleTheme = () => {
+    document.documentElement.classList.toggle('light-mode');
+    const nowLight = document.documentElement.classList.contains('light-mode');
+    setLightMode(nowLight);
+    document.dispatchEvent(new CustomEvent('theme-change'));
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-[#0b2936]/85 backdrop-blur-xl">
       <div className="mx-auto flex min-h-16 max-w-[1440px] items-center justify-between gap-4 px-4 py-3 sm:px-6">
@@ -20,9 +36,9 @@ export default function Navbar() {
             Book a survey <span aria-hidden>→</span>
           </a>
           <button
-            onClick={() => document.documentElement.classList.toggle('light-mode')}
+            onClick={toggleTheme}
             aria-label={lightMode ? 'Masuk ke mode gelap' : 'Masuk ke mode terang'}
-            className="p-2 rounded bg-white/10 border border-white/20 min-w-[44px] min-h-[44px] flex items-center justify-center"
+            className="p-2 rounded bg-white/10 border border-white/20 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors hover:bg-white/20"
           >
             <span className="material-symbols-outlined">{lightMode ? 'wb_sunny' : 'nightlight'}</span>
           </button>
@@ -30,7 +46,7 @@ export default function Navbar() {
             onClick={() => setOpen(!open)}
             aria-label={open ? 'Tutup menu' : 'Buka menu'}
             aria-expanded={open}
-            className="lg:hidden p-2 rounded bg-white/10 border border-white/20 min-w-[44px] min-h-[44px] flex items-center justify-center"
+            className="lg:hidden p-2 rounded bg-white/10 border border-white/20 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors hover:bg-white/20"
           >
             <span className="material-symbols-outlined">{open ? 'close' : 'menu'}</span>
           </button>
