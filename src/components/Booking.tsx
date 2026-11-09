@@ -22,7 +22,7 @@ export default function Booking() {
             </p>
             <div className="mt-8 flex flex-col gap-2 font-mono text-[13px]">
               <span>+62 21 5080 0000</span>
-              <span>deploy@voltix.co.id</span>
+              <span>deploy@evamo.co.id</span>
               <span className="text-[#8fa6ad]">Jakarta • Bogor • Depok • Tangerang • Bekasi</span>
             </div>
           </Reveal>

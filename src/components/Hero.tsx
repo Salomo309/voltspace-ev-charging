@@ -17,7 +17,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          VoltSpace — EV infrastructure, Jabodetabek
+          Evamo — EV infrastructure, Jabodetabek
         </motion.p>
         <motion.h1
           className="display-giant mt-6 text-[clamp(3rem,11vw,8.5rem)]"
