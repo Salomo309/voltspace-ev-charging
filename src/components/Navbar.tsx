@@ -18,8 +18,8 @@ export default function Navbar() {
           <a href="#booking" className="hidden items-center gap-2 font-mono text-[12px] tracking-[0.15em] uppercase text-white transition-colors hover:text-[#00e699] sm:inline-flex">
             Book a survey <span aria-hidden>→</span>
           </a>
-          <button onClick={() => setOpen(!open)} aria-label={open ? 'Tutup menu' : 'Buka menu'} aria-expanded={open} className="flex min-h-[44px] min-w-[44px] items-center justify-center lg:hidden">
-            <span className="material-symbols-outlined">{open ? 'close' : 'menu'}</span>
+          <button onClick={() => { document.documentElement.classList.toggle('light-mode'); setOpen(!open); }} aria-label={document.documentElement.classList.contains('light-mode') ? 'Masuk ke mode gelap' : 'Masuk ke mode terang'} className="lg:hidden p-2 rounded bg-white/10 border border-white/20 min-w-[44px] min-h-[44px] flex items-center justify-center">
+            <span className="material-symbols-outlined">{document.documentElement.classList.contains('light-mode') ? 'wb_sunny' : 'nightlight'}</span>
           </button>
         </div>
       </div>
