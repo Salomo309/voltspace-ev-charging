@@ -13,17 +13,17 @@ export default function Timeline() {
       <Reveal>
         <Kicker no="05" label="Process" />
         <h2 className="display-section mt-6 text-[clamp(2rem,6vw,4.5rem)]">
-          Live in five days<span className="text-[#00e699]">.</span>
+          Live in five days<span className="text-mint">.</span>
         </h2>
       </Reveal>
-      <div className="mt-12 border-t border-white/10">
+      <div className="mt-12 border-t border-line">
         {STEPS.map(([n, t, d, f], i) => (
           <Reveal key={n} delay={i * 0.05}>
-            <div className="grid grid-cols-1 gap-1 border-b border-white/10 py-6 sm:grid-cols-12 sm:items-baseline sm:gap-6 sm:py-7">
-              <span className="font-mono text-sm tabular-nums text-[#00e699] sm:col-span-1">{n}</span>
+            <div className="grid grid-cols-1 gap-1 border-b border-line py-6 sm:grid-cols-12 sm:items-baseline sm:gap-6 sm:py-7">
+              <span className="font-mono text-sm tabular-nums text-mint sm:col-span-1">{n}</span>
               <span className="font-display text-2xl font-bold tracking-tight sm:col-span-4 sm:text-3xl">{t}</span>
-              <span className="max-w-md text-[14px] leading-relaxed text-[#8fa6ad] sm:col-span-5">{d}</span>
-              <span className="font-mono text-[12px] tracking-[0.15em] uppercase text-[#8fa6ad] sm:col-span-2 sm:text-right">{f}</span>
+              <span className="max-w-md text-[14px] leading-relaxed text-muted sm:col-span-5">{d}</span>
+              <span className="font-mono text-[12px] tracking-[0.15em] uppercase text-muted sm:col-span-2 sm:text-right">{f}</span>
             </div>
           </Reveal>
         ))}

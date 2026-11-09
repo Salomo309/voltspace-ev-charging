@@ -12,7 +12,7 @@ export default function Hero() {
     <section id="solutions" className="relative overflow-hidden pt-16">
       <div className="mx-auto max-w-[1440px] px-4 pt-12 sm:px-6 sm:pt-20">
         <motion.p
-          className="font-mono text-[12px] tracking-[0.25em] uppercase text-[#8fa6ad]"
+          className="font-mono text-[12px] tracking-[0.25em] uppercase text-muted"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
@@ -27,7 +27,7 @@ export default function Hero() {
         >
           Power your
           <br />
-          property<span className="text-[#00e699]">.</span>
+          property<span className="text-mint">.</span>
         </motion.h1>
         <div className="mt-8 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-end">
           <motion.div
@@ -36,16 +36,16 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
           >
-            <p className="max-w-md text-[15px] leading-relaxed text-[#8fa6ad]">
+            <p className="max-w-md text-[15px] leading-relaxed text-muted">
               Turn parking bays into revenue-grade EV charging hubs with the
               ABB Terra AC Wallbox 7&nbsp;kW — engineered, installed, and
               maintained turnkey.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <a href="#booking" className="inline-flex min-h-[52px] items-center justify-center bg-[#00e699] px-8 font-mono text-[13px] font-bold tracking-[0.12em] uppercase text-[#071318] transition-colors hover:bg-[#76ffbb]">
+              <a href="#booking" className="inline-flex min-h-[52px] items-center justify-center bg-mint px-8 font-mono text-[13px] font-bold tracking-[0.12em] uppercase text-on-mint transition-colors hover:bg-mint-soft">
                 Book a site survey
               </a>
-              <a href="#package" className="inline-flex min-h-[52px] items-center justify-center gap-2 border border-white/20 px-8 font-mono text-[13px] tracking-[0.12em] uppercase transition-colors hover:border-[#00e699] hover:text-[#00e699]">
+              <a href="#package" className="inline-flex min-h-[52px] items-center justify-center gap-2 border border-line-strong px-8 font-mono text-[13px] tracking-[0.12em] uppercase transition-colors hover:border-mint hover:text-mint">
                 The package
               </a>
             </div>
@@ -59,11 +59,11 @@ export default function Hero() {
             <Charger3D />
           </motion.div>
         </div>
-        <div className="mt-12 grid grid-cols-1 border-t border-white/10 sm:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 border-t border-line sm:grid-cols-3">
           {META.map(([a, b]) => (
-            <div key={a} className="flex items-baseline justify-between gap-4 border-b border-white/10 py-4 sm:flex-col sm:items-start sm:gap-1 sm:border-b-0 sm:py-5 sm:pr-6">
+            <div key={a} className="flex items-baseline justify-between gap-4 border-b border-line py-4 sm:flex-col sm:items-start sm:gap-1 sm:border-b-0 sm:py-5 sm:pr-6">
               <span className="font-mono text-sm font-bold tabular-nums">{a}</span>
-              <span className="font-mono text-[11px] tracking-[0.15em] uppercase text-[#8fa6ad]">{b}</span>
+              <span className="font-mono text-[11px] tracking-[0.15em] uppercase text-muted">{b}</span>
             </div>
           ))}
         </div>

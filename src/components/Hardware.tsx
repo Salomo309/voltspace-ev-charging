@@ -14,9 +14,9 @@ export default function Hardware() {
       <Reveal>
         <Kicker no="03" label="Hardware" />
         <h2 className="display-section mt-6 max-w-4xl text-[clamp(2rem,6vw,4.5rem)]">
-          ABB Terra AC<span className="text-[#00e699]">.</span>
+          ABB Terra AC<span className="text-mint">.</span>
         </h2>
-        <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-[#8fa6ad]">
+        <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-muted">
           A full 60 kWh pack goes 20–80% in about 4.8 hours — against 15+
           hours on an unmanaged outlet. Swiss-engineered, tropical-proofed
           for Jabodetabek humidity.
@@ -24,21 +24,21 @@ export default function Hardware() {
       </Reveal>
       <div className="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-12">
         <Reveal className="lg:col-span-5">
-          <div className="border-t border-white/10 pt-6">
+          <div className="border-t border-line pt-6">
             <div className="font-mono text-[clamp(4rem,12vw,8rem)] font-bold leading-none tabular-nums tracking-tighter">
-              7.4<span className="text-[#00e699]">kW</span>
+              7.4<span className="text-mint">kW</span>
             </div>
-            <div className="mt-3 font-mono text-[12px] tracking-[0.2em] uppercase text-[#8fa6ad]">
+            <div className="mt-3 font-mono text-[12px] tracking-[0.2em] uppercase text-muted">
               3× faster than a wall outlet
             </div>
           </div>
         </Reveal>
         <div className="lg:col-span-7">
-          <div className="border-t border-white/10">
+          <div className="border-t border-line">
             {SPECS.map(([k, v], i) => (
               <Reveal key={k} delay={i * 0.05}>
-                <div className="grid grid-cols-1 gap-1 border-b border-white/10 py-5 sm:grid-cols-12 sm:gap-6">
-                  <span className="font-mono text-[12px] tracking-[0.2em] uppercase text-[#8fa6ad] sm:col-span-4">{k}</span>
+                <div className="grid grid-cols-1 gap-1 border-b border-line py-5 sm:grid-cols-12 sm:gap-6">
+                  <span className="font-mono text-[12px] tracking-[0.2em] uppercase text-muted sm:col-span-4">{k}</span>
                   <span className="text-[15px] leading-relaxed sm:col-span-8">{v}</span>
                 </div>
               </Reveal>

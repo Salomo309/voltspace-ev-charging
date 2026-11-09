@@ -106,7 +106,7 @@ function Particles() {
 export default function Charger3D() {
   return (
     <div>
-      <div className="relative h-[360px] w-full overflow-hidden border-t border-white/10 sm:h-[440px] lg:h-[520px]">
+      <div className="relative h-[360px] w-full overflow-hidden border-t border-line sm:h-[440px] lg:h-[520px]">
         <Canvas shadows camera={{ position: [2.8, 1.4, 3.8], fov: 40 }} dpr={[1, 1.75]} gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }} performance={{ min: 0.5 }}>
           <ambientLight intensity={1.4} color="#0a1526" />
           <directionalLight position={[4, 6, 4]} intensity={2.2} castShadow shadow-mapSize={[1024, 1024]} />
@@ -116,7 +116,7 @@ export default function Charger3D() {
           <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.8} minPolarAngle={Math.PI / 3.2} maxPolarAngle={Math.PI / 1.7} />
         </Canvas>
       </div>
-      <div className="flex items-center justify-between border-t border-white/10 py-3 font-mono text-[11px] tracking-[0.15em] uppercase text-[#8fa6ad]">
+      <div className="flex items-center justify-between border-t border-line py-3 font-mono text-[11px] tracking-[0.15em] uppercase text-muted">
         <span>ABB Terra AC — 7 kW</span>
         <span className="hidden min-[380px]:inline">Drag to rotate</span>
       </div>

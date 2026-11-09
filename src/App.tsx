@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div id="top" className="min-h-screen bg-[#0b2936] font-body text-[#edf5f2] antialiased">
+    <div id="top" className="min-h-screen bg-petrol font-body text-ink antialiased">
       <Navbar />
       <main>
         <Hero />

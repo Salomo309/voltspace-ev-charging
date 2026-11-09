@@ -12,19 +12,19 @@ export default function Market() {
       <Reveal>
         <Kicker no="01" label="Market" />
         <h2 className="display-section mt-6 max-w-4xl text-[clamp(2rem,6vw,4.5rem)]">
-          Demand is outpacing supply<span className="text-[#00e699]">.</span>
+          Demand is outpacing supply<span className="text-mint">.</span>
         </h2>
       </Reveal>
-      <div className="mt-12 border-t border-white/10">
+      <div className="mt-12 border-t border-line">
         {STATS.map(([val, title, desc], i) => (
           <Reveal key={val} delay={i * 0.06}>
-            <div className="grid grid-cols-1 gap-2 border-b border-white/10 py-8 sm:py-10 md:grid-cols-12 md:gap-6">
+            <div className="grid grid-cols-1 gap-2 border-b border-line py-8 sm:py-10 md:grid-cols-12 md:gap-6">
               <div className="font-mono text-[clamp(2.5rem,7vw,5rem)] font-bold leading-none tabular-nums tracking-tight md:col-span-5">
                 {val}
               </div>
               <div className="md:col-span-7">
                 <div className="font-display text-xl font-bold tracking-tight sm:text-2xl">{title}</div>
-                <p className="mt-2 max-w-xl text-[14px] leading-relaxed text-[#8fa6ad]">{desc}</p>
+                <p className="mt-2 max-w-xl text-[14px] leading-relaxed text-muted">{desc}</p>
               </div>
             </div>
           </Reveal>

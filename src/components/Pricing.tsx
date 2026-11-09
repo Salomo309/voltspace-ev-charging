@@ -16,22 +16,22 @@ export default function Pricing() {
   const total = useMemo(() => BASE_PRICE + ADDONS.reduce((s, a, i) => s + (checked[i] ? a.price : 0), 0), [checked]);
 
   return (
-    <section id="package" className="border-t border-white/10 bg-[#071318]">
+    <section id="package" className="border-t border-line bg-abyss">
       <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-12 px-4 py-20 sm:px-6 sm:py-28 lg:grid-cols-12">
         <div className="lg:col-span-7">
           <Reveal>
             <Kicker no="04" label="Turnkey package" />
             <h2 className="display-section mt-6 text-[clamp(2rem,6vw,4.5rem)]">
-              One price<span className="text-[#00e699]">.</span>
+              One price<span className="text-mint">.</span>
               <br />
-              No markups<span className="text-[#00e699]">.</span>
+              No markups<span className="text-mint">.</span>
             </h2>
           </Reveal>
-          <div className="mt-10 border-t border-white/10">
+          <div className="mt-10 border-t border-line">
             {SCOPE.map((t, i) => (
               <Reveal key={t} delay={i * 0.04}>
-                <div className="flex gap-4 border-b border-white/10 py-4 text-[15px] leading-relaxed">
-                  <span className="font-mono text-[13px] text-[#00e699]" aria-hidden>+</span>
+                <div className="flex gap-4 border-b border-line py-4 text-[15px] leading-relaxed">
+                  <span className="font-mono text-[13px] text-mint" aria-hidden>+</span>
                   <span>{t}</span>
                 </div>
               </Reveal>
@@ -40,8 +40,8 @@ export default function Pricing() {
         </div>
         <div className="lg:col-span-5">
           <Reveal className="lg:sticky lg:top-24">
-            <div className="border-t-2 border-[#00e699] pt-6">
-              <div className="font-mono text-[12px] tracking-[0.2em] uppercase text-[#8fa6ad]">
+            <div className="border-t-2 border-mint pt-6">
+              <div className="font-mono text-[12px] tracking-[0.2em] uppercase text-muted">
                 Jabodetabek turnkey, PPN 11% incl.
               </div>
               <motion.div
@@ -52,21 +52,21 @@ export default function Pricing() {
               >
                 {formatIDR(total)}
               </motion.div>
-              <div className="mt-8 border-t border-white/10">
+              <div className="mt-8 border-t border-line">
                 {ADDONS.map((a, i) => (
-                  <label key={a.name} className="flex cursor-pointer items-start gap-3 border-b border-white/10 py-4">
+                  <label key={a.name} className="flex cursor-pointer items-start gap-3 border-b border-line py-4">
                     <input
                       type="checkbox"
                       checked={checked[i]}
                       onChange={() => setChecked((c) => c.map((v, j) => (j === i ? !v : v)))}
-                      className="mt-1 h-4 w-4 shrink-0 accent-[#00e699]"
+                      className="mt-1 h-4 w-4 shrink-0 accent-mint"
                     />
                     <span className="flex-1 text-[14px] leading-snug">{a.name}</span>
-                    <span className="shrink-0 font-mono text-[12px] tabular-nums text-[#8fa6ad]">+{formatIDR(a.price)}</span>
+                    <span className="shrink-0 font-mono text-[12px] tabular-nums text-muted">+{formatIDR(a.price)}</span>
                   </label>
                 ))}
               </div>
-              <a href="#booking" className="mt-8 flex min-h-[52px] items-center justify-center bg-[#00e699] font-mono text-[13px] font-bold tracking-[0.12em] uppercase text-[#071318] transition-colors hover:bg-[#76ffbb]">
+              <a href="#booking" className="mt-8 flex min-h-[52px] items-center justify-center bg-mint font-mono text-[13px] font-bold tracking-[0.12em] uppercase text-on-mint transition-colors hover:bg-mint-soft">
                 Lock package →
               </a>
             </div>

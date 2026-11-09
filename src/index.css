@@ -1,66 +1,95 @@
 @import "tailwindcss";
 
-/* Color variables — overridden per theme by Tailwind 4 via data attribute */
+/* ---------- Theme tokens ---------- */
 :root {
-  --bg: #0b0f17;
-  --bg-surface: #0f131c;
-  --bg-elevated: #181c24;
+  --bg: #0b2936;
+  --bg-deep: #071318;
+  --surface: #0e3242;
   --fg: #edf5f2;
   --muted: #8fa6ad;
   --accent: #00e699;
   --accent-soft: #76ffbb;
-  --border: rgba(255,255,255,0.08);
-  --radius: 0.5rem;
-}
+  --on-accent: #071318;
+  --line: rgba(237, 245, 242, 0.12);
+  --line-strong: rgba(237, 245, 242, 0.24);
 
-.light-mode {
-  --bg: #ffffff;
-  --bg-surface: #f8fafc;
-  --bg-elevated: #ffffff;
-  --fg: #1e293b;
-  --muted: #64748b;
-  --accent: #00e699;
-  --accent-soft: #10b981;
-  --border: rgba(0,0,0,0.12);
+  color-scheme: dark;
 }
 
 html.light-mode {
   --bg: #ffffff;
-  --bg-surface: #f8fafc;
-  --bg-elevated: #ffffff;
-  --fg: #1e293b;
-  --muted: #64748b;
-  --accent: #00e699;
+  --bg-deep: #f4f7f6;
+  --surface: #ffffff;
+  --fg: #10231c;
+  --muted: #5b6b66;
+  --accent: #059669;
   --accent-soft: #10b981;
-  --border: rgba(0,0,0,0.12);
+  --on-accent: #ffffff;
+  --line: rgba(16, 35, 28, 0.12);
+  --line-strong: rgba(16, 35, 28, 0.24);
+
+  color-scheme: light;
 }
 
+@theme inline {
+  --color-abyss: var(--bg-deep);
+  --color-petrol: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--fg);
+  --color-muted: var(--muted);
+  --color-mint: var(--accent);
+  --color-mint-soft: var(--accent-soft);
+  --color-on-mint: var(--on-accent);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* ---------- Base ---------- */
 html { scroll-behavior: smooth; }
 html, body {
   max-width: 100%;
   overflow-x: clip;
 }
 body {
-  background: var(--bg);
+  background-color: var(--bg);
   color: var(--fg);
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--font-body);
   overflow-x: clip;
   -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: 100%;
-  transition: background 0.3s ease, color 0.3s ease;
+}
+body, #root, #top, header, section, footer, main, nav,
+input, select, textarea, button, a {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-*::selection { background: var(--accent); color: #071318; }
+/* ---------- Display type ---------- */
+.display-giant,
+.display-section {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+}
 
-@media (prefers-color-scheme: light) {
-  html:not(.light-mode) body { background: var(--bg); color: var(--fg); }
+*::selection { background: var(--accent); color: var(--on-accent); }
+
+img, canvas, video, svg { max-width: 100%; }
+canvas { touch-action: pan-y !important; display: block; }
+input, select, textarea { font-size: 16px; }
+@media (min-width: 640px) {
+  input, select, textarea { font-size: 14px; }
 }
 
 ::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--border); border-radius: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 8px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 
+/* ---------- Marquee ---------- */
 @keyframes marquee-x {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
@@ -74,11 +103,12 @@ body {
   .marquee-track { animation: none; }
 }
 
-.text-glow { text-shadow: 0 0 35px rgba(0,230,153,.2); }
-.card-glow { box-shadow: 0 0 30px rgba(0,230,153,.08); }
+/* ---------- Effects ---------- */
+.text-glow { text-shadow: 0 0 35px rgba(0, 230, 153, 0.2); }
+.card-glow { box-shadow: 0 0 30px rgba(0, 230, 153, 0.08); }
 .grid-bg {
-  background-image: linear-gradient(var(--border) 1px, transparent 1px),
-    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-image: linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 

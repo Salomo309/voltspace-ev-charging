@@ -1,7 +1,13 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      try {
+        var saved = localStorage.getItem('evamo-theme');
+        if (saved === 'light') document.documentElement.classList.add('light-mode');
+      } catch (e) {}
+    </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Evamo | Enterprise EV Charging Solutions</title>
