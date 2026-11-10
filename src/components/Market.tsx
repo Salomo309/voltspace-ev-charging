@@ -10,7 +10,7 @@ export default function Market() {
   return (
     <section id="market" className="mx-auto max-w-[1440px] px-4 py-20 sm:px-6 sm:py-28">
       <Reveal>
-        <Kicker no="01" label="Market" />
+        <Kicker no="02" label="Market" />
         <h2 className="display-section mt-6 max-w-4xl text-[clamp(2rem,6vw,4.5rem)]">
           Demand is outpacing supply<span className="text-mint">.</span>
         </h2>

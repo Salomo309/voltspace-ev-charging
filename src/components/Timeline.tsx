@@ -11,7 +11,7 @@ export default function Timeline() {
   return (
     <section className="mx-auto max-w-[1440px] px-4 py-20 sm:px-6 sm:py-28">
       <Reveal>
-        <Kicker no="05" label="Process" />
+        <Kicker no="06" label="Process" />
         <h2 className="display-section mt-6 text-[clamp(2rem,6vw,4.5rem)]">
           Live in five days<span className="text-mint">.</span>
         </h2>

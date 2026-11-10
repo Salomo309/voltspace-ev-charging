@@ -11,7 +11,7 @@ export default function Booking() {
       <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-12 px-4 py-20 sm:px-6 sm:py-28 lg:grid-cols-12">
         <div className="lg:col-span-6">
           <Reveal>
-            <Kicker no="06" label="Contact" />
+            <Kicker no="07" label="Contact" />
             <h2 className="display-section mt-6 text-[clamp(2.5rem,8vw,5.5rem)]">
               Book a<br />
               site survey<span className="text-mint">.</span>

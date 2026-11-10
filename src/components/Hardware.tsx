@@ -12,7 +12,7 @@ export default function Hardware() {
   return (
     <section id="hardware" className="mx-auto max-w-[1440px] px-4 py-20 sm:px-6 sm:py-28">
       <Reveal>
-        <Kicker no="03" label="Hardware" />
+        <Kicker no="04" label="Hardware" />
         <h2 className="display-section mt-6 max-w-4xl text-[clamp(2rem,6vw,4.5rem)]">
           ABB Terra AC<span className="text-mint">.</span>
         </h2>

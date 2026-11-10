@@ -11,11 +11,43 @@ export const COLORS = {
 };
 
 export const NAV = [
-  { label: 'Solutions', href: '#solutions' },
+  { label: 'Divisions', href: '#divisions' },
+  { label: 'EV Solutions', href: '#solutions' },
   { label: 'Market Data', href: '#market' },
-  { label: 'Hardware Specs', href: '#hardware' },
+  { label: 'Hardware', href: '#hardware' },
   { label: 'Property Types', href: '#property' },
-  { label: 'Jabodetabek Packages', href: '#package' },
+  { label: 'Packages', href: '#package' },
+];
+
+export const DIVISIONS = [
+  {
+    no: '01',
+    title: 'EV Charging',
+    lead: 'Commercial charging, end to end',
+    desc: 'AC wallboxes and DC fast charging for commercial property — site survey, dynamic load management, OCPP back-office, RFID billing, and after-sales SLA.',
+    tags: ['AC / DC', 'OCPP 1.6J', 'Load management'],
+  },
+  {
+    no: '02',
+    title: 'Electrical',
+    lead: 'Certified power infrastructure',
+    desc: 'LV panel builds, sub-metering, grounding, and cable containment. Installation and distribution upgrades engineered for continuous commercial load.',
+    tags: ['LV panels', 'Grounding', 'Certified install'],
+  },
+  {
+    no: '03',
+    title: 'Computer Equipment',
+    lead: 'Workplace IT, supplied and supported',
+    desc: 'Workstations, networking, storage, and structured cabling — procured, configured, and maintained on site for offices and mixed-use assets.',
+    tags: ['Hardware supply', 'Networking', 'Maintenance'],
+  },
+  {
+    no: '04',
+    title: 'Software Development',
+    lead: 'Systems built around the operation',
+    desc: 'Custom web platforms, operational dashboards, API integrations, and automation — from charging back-office to internal reporting tools.',
+    tags: ['Web apps', 'Dashboards', 'Integration'],
+  },
 ];
 
 export const SECTORS = [

@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Marquee from './components/Marquee';
+import Divisions from './components/Divisions';
 import Market from './components/Market';
 import PropertyTypes from './components/PropertyTypes';
 import Hardware from './components/Hardware';
@@ -18,6 +19,7 @@ function App() {
         <div className="mt-14 sm:mt-20">
           <Marquee />
         </div>
+        <Divisions />
         <Market />
         <PropertyTypes />
         <Hardware />

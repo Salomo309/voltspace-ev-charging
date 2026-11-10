@@ -20,7 +20,7 @@ export default function Pricing() {
       <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-12 px-4 py-20 sm:px-6 sm:py-28 lg:grid-cols-12">
         <div className="lg:col-span-7">
           <Reveal>
-            <Kicker no="04" label="Turnkey package" />
+            <Kicker no="05" label="Turnkey package" />
             <h2 className="display-section mt-6 text-[clamp(2rem,6vw,4.5rem)]">
               One price<span className="text-mint">.</span>
               <br />

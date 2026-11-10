@@ -6,7 +6,7 @@ export default function PropertyTypes() {
     <section id="property" className="border-t border-line bg-abyss">
       <div className="mx-auto max-w-[1440px] px-4 py-20 sm:px-6 sm:py-28">
         <Reveal>
-          <Kicker no="02" label="Where it deploys" />
+          <Kicker no="03" label="Where it deploys" />
           <h2 className="display-section mt-6 max-w-4xl text-[clamp(2rem,6vw,4.5rem)]">
             One wallbox, six asset classes<span className="text-mint">.</span>
           </h2>
