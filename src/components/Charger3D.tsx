@@ -1,6 +1,7 @@
 import { useMemo, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, ContactShadows } from '@react-three/drei';
+import { useInView } from 'framer-motion';
 import * as THREE from 'three';
 
 function WallboxModel() {
@@ -104,10 +105,13 @@ function Particles() {
 }
 
 export default function Charger3D() {
+  const wrapRef = useRef<HTMLDivElement>(null);
+  const inView = useInView(wrapRef, { margin: '200px' });
+
   return (
-    <div>
+    <div ref={wrapRef}>
       <div className="relative h-[360px] w-full overflow-hidden border-t border-line sm:h-[440px] lg:h-[520px]">
-        <Canvas shadows camera={{ position: [2.8, 1.4, 3.8], fov: 40 }} dpr={[1, 1.75]} gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }} performance={{ min: 0.5 }}>
+        <Canvas shadows frameloop={inView ? 'always' : 'never'} camera={{ position: [2.8, 1.4, 3.8], fov: 40 }} dpr={[1, 1.5]} gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }} performance={{ min: 0.5 }}>
           <ambientLight intensity={1.4} color="#0a1526" />
           <directionalLight position={[4, 6, 4]} intensity={2.2} castShadow shadow-mapSize={[1024, 1024]} />
           <WallboxModel />

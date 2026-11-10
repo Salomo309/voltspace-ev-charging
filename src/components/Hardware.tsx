@@ -14,7 +14,7 @@ export default function Hardware() {
       <Reveal>
         <Kicker no="04" label="Hardware" />
         <h2 className="display-section mt-6 max-w-4xl text-[clamp(2rem,6vw,4.5rem)]">
-          ABB Terra AC<span className="text-mint">.</span>
+          ABB Terra AC.
         </h2>
         <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-muted">
           A full 60 kWh pack goes 20–80% in about 4.8 hours — against 15+

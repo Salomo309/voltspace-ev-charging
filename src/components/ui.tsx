@@ -17,9 +17,9 @@ export function Reveal({ children, delay = 0, className = '' }: { children: Reac
 
 export function Kicker({ no, label }: { no: string; label: string }) {
   return (
-    <div className="flex items-center gap-3 font-mono text-[12px] tracking-[0.2em] uppercase text-muted">
-      <span className="text-mint">{no}</span>
-      <span className="h-px w-10 bg-ink/20" />
+    <div className="flex items-center gap-3 font-mono text-[11px] tracking-[0.2em] uppercase text-muted">
+      <span className="text-mint">SHEET {no}</span>
+      <span className="h-px w-4 bg-ink/20" />
       <span>{label}</span>
     </div>
   );

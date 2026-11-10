@@ -13,9 +13,7 @@ export const COLORS = {
 export const NAV = [
   { label: 'Divisions', href: '#divisions' },
   { label: 'EV Solutions', href: '#solutions' },
-  { label: 'Market Data', href: '#market' },
   { label: 'Hardware', href: '#hardware' },
-  { label: 'Property Types', href: '#property' },
   { label: 'Packages', href: '#package' },
 ];
 

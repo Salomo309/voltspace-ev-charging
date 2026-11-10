@@ -36,7 +36,7 @@ export default function Navbar() {
             aria-label={lightMode ? 'Masuk ke mode gelap' : 'Masuk ke mode terang'}
             aria-pressed={lightMode}
             title={lightMode ? 'Mode gelap' : 'Mode terang'}
-            className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded border border-line-strong bg-ink/10 p-2 transition-colors hover:bg-ink/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-mint"
+            className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded border border-line-strong bg-ink/10 p-2 transition-colors hover:bg-ink/20"
           >
             <span className="material-symbols-outlined">{lightMode ? 'wb_sunny' : 'nightlight'}</span>
           </button>
@@ -44,7 +44,7 @@ export default function Navbar() {
             onClick={() => setOpen(!open)}
             aria-label={open ? 'Tutup menu' : 'Buka menu'}
             aria-expanded={open}
-            className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded border border-line-strong bg-ink/10 p-2 transition-colors hover:bg-ink/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-mint lg:hidden"
+            className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded border border-line-strong bg-ink/10 p-2 transition-colors hover:bg-ink/20 lg:hidden"
           >
             <span className="material-symbols-outlined">{open ? 'close' : 'menu'}</span>
           </button>

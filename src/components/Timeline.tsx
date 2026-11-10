@@ -13,7 +13,7 @@ export default function Timeline() {
       <Reveal>
         <Kicker no="06" label="Process" />
         <h2 className="display-section mt-6 text-[clamp(2rem,6vw,4.5rem)]">
-          Live in five days<span className="text-mint">.</span>
+          Live in five days.
         </h2>
       </Reveal>
       <div className="mt-12 border-t border-line">

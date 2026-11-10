@@ -12,7 +12,7 @@ export default function Market() {
       <Reveal>
         <Kicker no="02" label="Market" />
         <h2 className="display-section mt-6 max-w-4xl text-[clamp(2rem,6vw,4.5rem)]">
-          Demand is outpacing supply<span className="text-mint">.</span>
+          Demand is outpacing supply.
         </h2>
       </Reveal>
       <div className="mt-12 border-t border-line">

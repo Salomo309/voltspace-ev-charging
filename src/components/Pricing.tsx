@@ -22,9 +22,9 @@ export default function Pricing() {
           <Reveal>
             <Kicker no="05" label="Turnkey package" />
             <h2 className="display-section mt-6 text-[clamp(2rem,6vw,4.5rem)]">
-              One price<span className="text-mint">.</span>
+              One price.
               <br />
-              No markups<span className="text-mint">.</span>
+              No markups.
             </h2>
           </Reveal>
           <div className="mt-10 border-t border-line">

@@ -8,7 +8,7 @@ export default function PropertyTypes() {
         <Reveal>
           <Kicker no="03" label="Where it deploys" />
           <h2 className="display-section mt-6 max-w-4xl text-[clamp(2rem,6vw,4.5rem)]">
-            One wallbox, six asset classes<span className="text-mint">.</span>
+            One wallbox, six asset classes.
           </h2>
         </Reveal>
         <div className="mt-12 border-t border-line">

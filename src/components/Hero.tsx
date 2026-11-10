@@ -1,5 +1,7 @@
+import { lazy, Suspense } from 'react';
 import { motion } from 'framer-motion';
-import Charger3D from './Charger3D';
+
+const Charger3D = lazy(() => import('./Charger3D'));
 
 const META: Array<[string, string]> = [
   ['7.4 kW / 32A', 'Single-phase AC'],
@@ -56,7 +58,16 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.9, delay: 0.25 }}
           >
-            <Charger3D />
+            <Suspense
+              fallback={
+                <div
+                  className="h-[360px] w-full border-t border-line sm:h-[440px] lg:h-[520px]"
+                  aria-hidden
+                />
+              }
+            >
+              <Charger3D />
+            </Suspense>
           </motion.div>
         </div>
         <div className="mt-12 grid grid-cols-1 border-t border-line sm:grid-cols-3">
