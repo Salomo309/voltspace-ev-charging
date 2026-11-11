@@ -4,7 +4,7 @@ import { Kicker, Reveal } from './ui';
 
 const PHONE_DISPLAY = '+62 812-9956-512';
 const PHONE_HREF = 'tel:+628129956512';
-const EMAIL = 'support@evamosolusi.com';
+const EMAIL = 'admin@evamosolusi.com';
 const WHATSAPP_NUMBER = '628129956512';
 const ADDRESS = 'Jl. Puri Agung I, Kab. Tangerang, Banten 15560';
 
